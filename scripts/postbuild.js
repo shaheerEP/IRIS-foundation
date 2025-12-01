@@ -33,11 +33,26 @@ async function main() {
   if (fs.existsSync(nextPackageSrc)) {
     try {
       fs.mkdirSync(path.dirname(nextPackageDest), { recursive: true });
+      // Remove destination if it exists to avoid non-dir copy errors
+      if (fs.existsSync(nextPackageDest)) {
+        try {
+          fs.rmSync(nextPackageDest, { recursive: true, force: true });
+        } catch (err) {
+          console.warn('Warning: could not remove existing next package at destination:', nextPackageDest, err.message);
+        }
+      }
       // Use dereference to copy the actual files instead of creating symlinks (pnpm uses symlinks)
       fs.cpSync(nextPackageSrc, nextPackageDest, { recursive: true, dereference: true });
       console.log('Copied node_modules/next to .netlify/next/node_modules/next');
       try {
         fs.mkdirSync(path.dirname(nextPackageDestDist), { recursive: true });
+        if (fs.existsSync(nextPackageDestDist)) {
+          try {
+            fs.rmSync(nextPackageDestDist, { recursive: true, force: true });
+          } catch (err) {
+            console.warn('Warning: could not remove existing next package at dist destination:', nextPackageDestDist, err.message);
+          }
+        }
         fs.cpSync(nextPackageSrc, nextPackageDestDist, { recursive: true, dereference: true });
         console.log('Copied node_modules/next to .netlify/dist/node_modules/next');
       } catch (err) {
