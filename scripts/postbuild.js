@@ -33,11 +33,12 @@ async function main() {
   if (fs.existsSync(nextPackageSrc)) {
     try {
       fs.mkdirSync(path.dirname(nextPackageDest), { recursive: true });
-      fs.cpSync(nextPackageSrc, nextPackageDest, { recursive: true });
+      // Use dereference to copy the actual files instead of creating symlinks (pnpm uses symlinks)
+      fs.cpSync(nextPackageSrc, nextPackageDest, { recursive: true, dereference: true });
       console.log('Copied node_modules/next to .netlify/next/node_modules/next');
       try {
         fs.mkdirSync(path.dirname(nextPackageDestDist), { recursive: true });
-        fs.cpSync(nextPackageSrc, nextPackageDestDist, { recursive: true });
+        fs.cpSync(nextPackageSrc, nextPackageDestDist, { recursive: true, dereference: true });
         console.log('Copied node_modules/next to .netlify/dist/node_modules/next');
       } catch (err) {
         // If we can't make this dir or copy to dist (it may not exist yet), just warn
