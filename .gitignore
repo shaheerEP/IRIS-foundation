@@ -23,6 +23,7 @@ pnpm-debug.log*
 
 # Build output
 dist/
+.netlify/
 
 # Misc
 .idea/
