@@ -13,7 +13,7 @@ export const services = [
       "Hifzul Quran Model Academy and village maktab programs bringing Quranic and formal education to rural children.",
     href: "/services/education",
     icon: "book",
-    images: ["/education-1.jpg", "/education-2.jpg", "/education-3.jpg"],
+    images: ["/education-1.jpg", "/education-2.jpg", "/education-3.jpg","/education-4.jpg"],
   },
   {
     title: "Training",

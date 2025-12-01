@@ -33,7 +33,7 @@ export function Header() {
       <Container size="large">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <Image src="/logo.svg" alt="IRIS Foundation" width={40} height={40} />
+            <Image src="/logo.png" alt="IRIS Foundation" width={40} height={40} />
             <span className={cn("font-bold text-xl transition-colors", isScrolled ? "text-primary" : "text-white")}>
               {siteConfig.name}
             </span>

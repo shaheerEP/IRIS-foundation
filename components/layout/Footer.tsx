@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
-              <Image src="/logo.svg" alt="IRIS Foundation" width={40} height={40} className="brightness-200" />
+              <Image src="/logo.png" alt="IRIS Foundation" width={40} height={40} className="brightness-200" />
               <span className="font-bold text-xl">{siteConfig.name}</span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed">
