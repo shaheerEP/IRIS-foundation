@@ -52,7 +52,7 @@ export default function ProgramsPage() {
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/programs-hero.jpg"
+            src="/programs-hero.png"
             alt="IRIS Foundation programs"
             fill
             className="object-cover"

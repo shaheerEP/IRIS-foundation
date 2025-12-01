@@ -22,7 +22,7 @@ export default function FeedingFoodPage() {
     <>
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/sample-hero.jpg" alt="Feeding Programs" fill className="object-cover" />
+          <Image src="/hero.png" alt="Feeding Programs" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-primary/70" />
         </div>
         <Container size="large" className="relative z-10 pt-24">

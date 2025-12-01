@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/sample-hero.jpg"
+            src="/hero.png"
             alt="About IRIS Foundation"
             fill
             className="object-cover"

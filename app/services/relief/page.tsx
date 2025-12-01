@@ -39,7 +39,7 @@ export default function ReliefPage() {
     <>
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/sample-hero.jpg" alt="Relief Programs" fill className="object-cover" />
+          <Image src="/hero.png" alt="Relief Programs" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-accent/80 to-primary/70" />
         </div>
         <Container size="large" className="relative z-10 pt-24">

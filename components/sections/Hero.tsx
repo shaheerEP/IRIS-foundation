@@ -17,7 +17,7 @@ export function Hero({
   subtitle,
   primaryCta,
   secondaryCta,
-  backgroundImage = "/sample-hero.jpg",
+  backgroundImage = "/hero.png",
   overlay = true,
   id,
 }: HeroProps) {

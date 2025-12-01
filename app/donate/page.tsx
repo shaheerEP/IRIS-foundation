@@ -18,7 +18,7 @@ export default function DonatePage() {
       {/* Hero section */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/sample-hero.jpg" alt="Donate" fill className="object-cover" />
+          <Image src="/hero.png" alt="Donate" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-primary/80" />
         </div>
         <Container size="large" className="relative z-10 pt-24">
@@ -38,7 +38,7 @@ export default function DonatePage() {
         {/* Faint background image with overlay blur behind the cards */}
         <div className="pointer-events-none absolute inset-0 w-full h-full">
           <Image
-            src="/sample-hero.jpg"
+            src="/hero.png"
             alt=""
             fill
             priority={false}
