@@ -21,7 +21,7 @@ export const services = [
       "Rabbani Fellowship and other trainings preparing social leaders to serve in underserved regions.",
     href: "/services/training",
     icon: "briefcase",
-    images: ["/training-1.jpg"],
+    images: ["/training-1.jpg","/training-2.jpg","/training-3.jpg","/training-4.jpg"],
   },
   {
     title: "Cultural Centers",
@@ -29,7 +29,7 @@ export const services = [
       "Mosques and cultural centers that host prayers, classes, and community programs in 40+ villages.",
     href: "/services/cultural-center",
     icon: "building",
-    images: ["/cultural-1.jpg"],
+    images: ["/center-1.jpg","/center-2.jpg","/center-3.jpg","/center-4.jpg"],
   },
   {
     title: "Relief",
@@ -37,7 +37,7 @@ export const services = [
       "Blanket drives, home equipment, and food kits for families facing harsh winters and poverty.",
     href: "/services/relief",
     icon: "shield",
-    images: ["/relief-1.jpg"],
+    images: ["/relief-1.jpg","/relief-2.jpg","/relief-3.jpg","/relief-4.jpg"],
   },
   {
     title: "Feeding Food",
@@ -45,7 +45,7 @@ export const services = [
       "Special Day programs and Ramadan iftar meals feeding thousands of children and families.",
     href: "/services/feeding-food",
     icon: "utensils",
-    images: ["/feeding-1.jpg"],
+    images: ["/feeding-1.jpg","/feeding-2.jpg","/feeding-3.jpg","/feeding-4.jpg"],
   },
   {
     title: "Drops of Life",
@@ -53,7 +53,7 @@ export const services = [
       "Clean drinking water projects providing safe water in remote villages across four states.",
     href: "/services/drops-of-life",
     icon: "droplet",
-    images: ["/water-1.jpg"],
+    images: ["/drops-1.jpg","/drops-2.jpg","/drops-3.jpg","/drops-4.jpg"],
   },
 ]
 

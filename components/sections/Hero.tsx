@@ -38,21 +38,23 @@ export function Hero({
 
       <Container size="large" className="relative z-10 pt-20">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="glass rounded-3xl p-8 md:p-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">{title}</h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed text-pretty">{subtitle}</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              {primaryCta && (
-                <Button href={primaryCta.href} variant="secondary" size="lg">
-                  {primaryCta.label}
-                </Button>
-              )}
-              {secondaryCta && (
-                <Button href={secondaryCta.href} variant="glass" size="lg">
-                  {secondaryCta.label}
-                </Button>
-              )}
-            </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
+            {title}
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed text-pretty">
+            {subtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {primaryCta && (
+              <Button href={primaryCta.href} variant="secondary" size="lg">
+                {primaryCta.label}
+              </Button>
+            )}
+            {secondaryCta && (
+              <Button href={secondaryCta.href} variant="glass" size="lg">
+                {secondaryCta.label}
+              </Button>
+            )}
           </div>
         </div>
       </Container>
