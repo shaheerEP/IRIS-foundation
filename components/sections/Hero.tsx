@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 
@@ -22,10 +25,19 @@ export function Hero({
   id,
 }: HeroProps) {
   return (
-    <section id={id} className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <section
+      id={id}
+      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden"
+    >
+      {/* Background */}
+      <motion.div
+        initial={{ scale: 1.2, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="absolute inset-0 z-0"
+      >
         <Image
-          src={backgroundImage || "/placeholder.svg"}
+          src={backgroundImage}
           alt="Hero background"
           fill
           className="object-cover"
@@ -34,28 +46,64 @@ export function Hero({
         {overlay && (
           <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-secondary/50" />
         )}
-      </div>
+      </motion.div>
 
+      {/* Content */}
       <Container size="large" className="relative z-10 pt-20">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
+          {/* Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance"
+          >
             {title}
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed text-pretty">
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
+            className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed text-pretty"
+          >
             {subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          </motion.p>
+
+          {/* Buttons with stagger */}
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.15 },
+              },
+            }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
             {primaryCta && (
-              <Button href={primaryCta.href} variant="secondary" size="lg">
-                {primaryCta.label}
-              </Button>
+              <motion.div
+                variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }}
+              >
+                <Button href={primaryCta.href} variant="secondary" size="lg">
+                  {primaryCta.label}
+                </Button>
+              </motion.div>
             )}
+
             {secondaryCta && (
-              <Button href={secondaryCta.href} variant="glass" size="lg">
-                {secondaryCta.label}
-              </Button>
+              <motion.div
+                variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }}
+              >
+                <Button href={secondaryCta.href} variant="glass" size="lg">
+                  {secondaryCta.label}
+                </Button>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>
