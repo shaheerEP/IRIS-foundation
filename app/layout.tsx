@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   },
   description:
     "Touching Hearts, Changing Lives - Supporting education and social uplift in underprivileged villages across India",
-  generator: "v0.app",
+  generator: "Shajets",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/logo.png",
         media: "(prefers-color-scheme: light)",
       },
       {
