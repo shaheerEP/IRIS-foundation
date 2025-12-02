@@ -61,11 +61,7 @@ export default function Home() {
         </section>
       </AnimatedSection>
 
-      {/* SERVICES */}
-      <AnimatedSection>
-        <HomeServicesOverview />
-      </AnimatedSection>
-
+   
       {/* IMPACT STATS */}
       <AnimatedSection>
         <ImpactStatsStrip />

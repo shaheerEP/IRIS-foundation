@@ -6,57 +6,6 @@ export const impactStats = [
 ];
 
 // Service summary from brochure
-export const services = [
-  {
-    title: "Education",
-    description:
-      "Hifzul Quran Model Academy and village maktab programs bringing Quranic and formal education to rural children.",
-    href: "/services/education",
-    icon: "book",
-    images: ["/education-1.jpg", "/education-2.jpg", "/education-3.jpg","/education-4.jpg"],
-  },
-  {
-    title: "Training",
-    description:
-      "Rabbani Fellowship and other trainings preparing social leaders to serve in underserved regions.",
-    href: "/services/training",
-    icon: "briefcase",
-    images: ["/training-1.jpg","/training-2.jpg","/training-3.jpg","/training-4.jpg"],
-  },
-  {
-    title: "Cultural Centers",
-    description:
-      "Mosques and cultural centers that host prayers, classes, and community programs in 40+ villages.",
-    href: "/services/cultural-center",
-    icon: "building",
-    images: ["/center-1.jpg","/center-2.jpg","/center-3.jpg","/center-4.jpg"],
-  },
-  {
-    title: "Relief",
-    description:
-      "Blanket drives, home equipment, and food kits for families facing harsh winters and poverty.",
-    href: "/services/relief",
-    icon: "shield",
-    images: ["/relief-1.jpg","/relief-2.jpg","/relief-3.jpg","/relief-4.jpg"],
-  },
-  {
-    title: "Feeding Food",
-    description:
-      "Special Day programs and Ramadan iftar meals feeding thousands of children and families.",
-    href: "/services/feeding-food",
-    icon: "utensils",
-    images: ["/feeding-1.jpg","/feeding-2.jpg","/feeding-3.jpg","/feeding-4.jpg"],
-  },
-  {
-    title: "Drops of Life",
-    description:
-      "Clean drinking water projects providing safe water in remote villages across four states.",
-    href: "/services/drops-of-life",
-    icon: "droplet",
-    images: ["/drops-1.jpg","/drops-2.jpg","/drops-3.jpg","/drops-4.jpg"],
-  },
-]
-
 
 
 // Direct donation options with brochure-based values

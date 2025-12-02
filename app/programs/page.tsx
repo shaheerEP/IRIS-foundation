@@ -21,7 +21,7 @@ const programs = [
   },
   {
     icon: <Users className="w-8 h-8" />,
-    title: "Makatib-e-Imam Rabbani",
+    title: "Micro schools Imam Rabbani",
     description:
       "A village maktab network providing basic Islamic learning, Qur’an reading, and academic support for children near their homes. Each maktab is a place for trusted mentoring and building lifelong learning habits.",
     stats: "Multiple village maktabs · 500+ children reached",
