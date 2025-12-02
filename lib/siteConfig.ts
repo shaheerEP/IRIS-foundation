@@ -4,7 +4,7 @@ export const siteConfig = {
     "Touching Hearts, Changing Lives - Supporting education and social uplift in underprivileged villages across India",
   url: "https://irisfoundation.org",
   contact: {
-    email: "info@irisfoundation.org",
+    email: "info@irisindia.org",
     phone: "+91 7508 916 313",
     address: "Sirhind, Punjab, India",
   },

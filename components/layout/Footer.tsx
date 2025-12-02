@@ -105,7 +105,7 @@ export function Footer() {
             }}
             transition={{ duration: 0.5 }}
           >
-            <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
+           
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-secondary mt-0.5 flex-shrink-0" />
