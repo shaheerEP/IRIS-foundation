@@ -112,17 +112,19 @@ export default function ContactPage() {
         </div>
 
         {/* GOOGLE MAP LINK */}
-       <div className="aspect-video rounded-2xl overflow-hidden border border-border">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.345442494018!2d76.04141497480465!3d9.03366419098463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b065ae358a59f05%3A0x37c5b61127011cbb!2sIRIS%20India!5e0!3m2!1sen!2sin!4v1733168550000!5m2!1sen!2sin"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen={true}
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
+{/* GOOGLE MAP – LIVE EMBEDDED IFRAME */}
+<div className="aspect-video rounded-2xl overflow-hidden border border-border">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d538.1923469207061!2d76.39522116495891!3d30.66967044086105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39101dcffc187bad%3A0xf2b8ae80408d64ce!2sIRIS%20EDUCATION%20CENTER!5e1!3m2!1sen!2sin!4v1764752493215!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
       </div>
 
       {/* RIGHT SIDE – FORM */}
