@@ -38,7 +38,7 @@ export function Hero({
       >
        
         {overlay && (
-         <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/40 to-secondary/30" />
+         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-secondary/50" />
 
         )}
       </motion.div>

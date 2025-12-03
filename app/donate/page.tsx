@@ -16,9 +16,8 @@ export default function DonatePage() {
   return (
     <>
       {/* Hero section */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+     <section className="relative min-h-[50vh] flex items-center overflow-hidden pb-24 sm:pb-32">
         <div className="absolute inset-0">
-          <Image src="/hero.pn" alt="Donate" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-primary/80" />
         </div>
         <Container size="large" className="relative z-10 pt-24">
@@ -31,10 +30,27 @@ export default function DonatePage() {
             />
           </div>
         </Container>
+
+                {/* --- WAVE SVG START --- */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
+          <svg 
+            className="relative block w-full h-[60px] sm:h-[120px]" 
+            data-name="Layer 1" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 1440 320" 
+            preserveAspectRatio="none"
+          >
+            <path 
+              d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" 
+              className="fill-white" 
+            />
+          </svg>
+        </div>
+        {/* --- WAVE SVG END --- */}
       </section>
 
       {/* Donation options with background */}
-      <section className="relative py-24 bg-background overflow-hidden">
+      <section className="relative py-24 bg-white overflow-hidden">
         
         {/* --- SCATTERED BACKGROUND START --- */}
         <div className="pointer-events-none absolute inset-0 w-full h-full overflow-hidden select-none">
@@ -43,23 +59,19 @@ export default function DonatePage() {
           
           {/* Scattered Image 1: Top Left - Visible */}
           <div className="absolute -top-12 -left-12 w-96 h-96 opacity-20 rotate-12 blur-[1px] z-0">
-             <Image src="/hero.pn" alt="" fill className="object-cover rounded-full grayscale mix-blend-multiply" />
-          </div>
+             </div>
 
           {/* Scattered Image 2: Right/Middle - Passing under cards */}
           <div className="absolute top-1/3 -right-20 w-[30rem] h-[30rem] opacity-15 -rotate-12 blur-sm z-0">
-             <Image src="/hero.pn" alt="" fill className="object-cover rounded-[4rem] grayscale mix-blend-multiply" />
-          </div>
+            </div>
 
           {/* Scattered Image 3: Bottom Left - Large */}
           <div className="absolute bottom-0 left-10 w-[500px] h-[500px] opacity-15 rotate-6 blur-[2px] z-0">
-             <Image src="/hero.pn" alt="" fill className="object-cover rounded-full grayscale mix-blend-multiply" />
-          </div>
+            </div>
 
            {/* Scattered Image 4: Center/Top - Detail */}
            <div className="absolute top-20 left-1/2 w-48 h-48 opacity-20 rotate-45 blur-[1px] z-0">
-             <Image src="/hero.pn" alt="" fill className="object-cover rounded-3xl grayscale mix-blend-multiply" />
-          </div>
+           </div>
         </div>
         {/* --- SCATTERED BACKGROUND END --- */}
 

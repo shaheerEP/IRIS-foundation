@@ -1,114 +1,110 @@
-"use client"
+'use client'
 
 import React from "react"
 import Image from "next/image"
-import { motion } from "framer-motion"
-import {
-  Book,
-  Briefcase,
-  Building,
-  Shield,
-  Utensils,
-  Droplet,
-} from "lucide-react"
-import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { SectionTitle } from "@/components/ui/SectionTitle"
-import { services } from "@/lib/constants"
 
-const iconMap: Record<string, React.ReactNode> = {
-  book: <Book className="w-8 h-8" />,
-  briefcase: <Briefcase className="w-8 h-8" />,
-  building: <Building className="w-8 h-8" />,
-  shield: <Shield className="w-8 h-8" />,
-  utensils: <Utensils className="w-8 h-8" />,
-  droplet: <Droplet className="w-8 h-8" />,
-}
+// Data
+const services = [
+  { images: ["/education-1.jpg", "/education-2.jpg", "/education-3.jpg", "/education-4.jpg"] },
+  { images: ["/training-1.jpg", "/training-2.jpg", "/training-3.jpg", "/training-4.jpg"] },
+  { images: ["/center-1.jpg", "/center-2.jpg", "/center-3.jpg", "/center-4.jpg"] },
+  { images: ["/relief-1.jpg", "/relief-2.jpg", "/relief-3.jpg", "/relief-4.jpg"] },
+  { images: ["/feeding-1.jpg", "/feeding-2.jpg", "/feeding-3.jpg", "/feeding-4.jpg"] },
+  { images: ["/drops-1.jpg", "/drops-2.jpg", "/drops-3.jpg", "/drops-4.jpg"] },
+]
 
-export function HomeServicesOverview() {
+export  function HomeServicesOverview() {
+  const baseImages = services.flatMap((s) => s.images ?? [])
+  const infiniteImages = [...baseImages, ...baseImages]
+
   return (
-    <section id="services" className="py-24 bg-background">
-      <Container size="large">
-        <SectionTitle
-          label="What We Do"
-          title="Our Services"
-          subtitle="Scroll down to see each focus area of IRIS Foundation"
-          centered
+<section className="relative py-16 overflow-hidden flex flex-col gap-8">
+  
+  {/* --- 1. NEW BACKGROUND LAYERS --- */}
+  {/* Gradient Background */}
+  <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark to-secondary" />
+  
+  {/* Ambient Blobs */}
+  <div className="absolute inset-0 opacity-10 pointer-events-none">
+    <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+    <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+  </div>
+
+  {/* --- 2. EXISTING CONTENT (Added 'relative z-10' to stay visible) --- */}
+  
+{/* Text Section */}
+<Container size="" className="text-center relative z-10">
+  
+  {/* Label & Title Section */}
+  <div className="mb-6 space-y-2">
+    {/* Label: Smaller, uppercase, slightly transparent white for hierarchy */}
+    <span className="block text-sm font-bold tracking-widest uppercase text-white md:text-base">
+      Other Services
+    </span>
+    
+    {/* Title: Large, bold, purely white */}
+    <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
+      Holistic Community Development
+    </h2>
+  </div>
+
+  <div className="mt-4 max-w-2xl mx-auto">
+    {/* Paragraph: Changed text-gray-300 to text-white */}
+    <p className="text-sm md:text-base leading-relaxed text-white">
+      The IRIS Foundation fosters holistic growth through child{" "}
+      <strong className="text-white">Education</strong>, leadership{" "}
+      <strong className="text-white">Training</strong>, and community{" "}
+      <strong className="text-white">Cultural Centers</strong> in over 40
+      villages. We also address critical needs with winter{" "}
+      <strong className="text-white">Relief</strong> drives, extensive{" "}
+      <strong className="text-white">Food Feeding</strong> programs, and our{" "}
+      <strong className="text-white">Drops of Life</strong> clean water
+      projects—ensuring dignity and development go hand in hand.
+    </p>
+  </div>
+</Container>
+
+{/* Infinite Image Slider Section */}
+<div className="w-full relative z-10 mt-2">
+  <style jsx global>{`
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      animation: scroll 100s linear infinite;
+    }
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
+  `}</style>
+
+  {/* Added 'gap-4' here for distance between images */}
+  <div className="flex w-fit animate-scroll gap-4 px-4">
+    {infiniteImages.map((src, index) => (
+      <div 
+        key={`${src}-${index}`} 
+        // Added overflow-hidden and asymmetric rounding classes here:
+        // rounded-tl-lg & rounded-br-lg: Standard small curve for Top Left and Bottom Right
+        // rounded-tr-[40px] & rounded-bl-[40px]: Larger curve for Top Right and Bottom Left
+        className="relative w-[280px] h-[180px] md:w-[350px] md:h-[240px] shrink-0 overflow-hidden rounded-tl-lg rounded-br-lg rounded-tr-[40px] rounded-bl-[40px]"
+      >
+        <Image 
+          src={src} 
+          alt="Service highlight" 
+          fill 
+          className="object-cover"
+          sizes="(max-width: 768px) 280px, 350px"
         />
+        {/* The overlay will also respect the rounded corners because of overflow-hidden on the parent div */}
+        <div className="absolute inset-0 bg-black/5" />
+      </div>
+    ))}
+  </div>
+</div>
 
-        <div className="mt-10 space-y-10">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-            >
-              <Card
-                href={service.href}
-                variant="bordered"
-                className="overflow-hidden"
-              >
-                <div
-                  className={`grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] items-stretch ${
-                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                  }`}
-                >
-                  {/* Text + icon */}
-                  <div className="p-6 md:p-8 flex flex-col justify-center">
-                    {/* Icon animation */}
-                    <motion.div
-                      initial={{ scale: 0.7, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="mb-4 text-primary"
-                    >
-                      {iconMap[service.icon]}
-                    </motion.div>
-
-                    <h3 className="text-2xl font-semibold text-foreground mb-3">
-                      {service.title}
-                    </h3>
-
-                    <p className="text-muted leading-relaxed mb-6">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  {/* Images */}
-                  <div className="relative bg-muted/40">
-                    {Array.isArray(service.images) && service.images.length > 0 ? (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 h-full p-4">
-                        {service.images.slice(0, 3).map((src, idx) => (
-                          <motion.div
-                            key={src + idx}
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.4 }}
-                            className="relative w-full h-40 sm:h-44 md:h-52 lg:h-56 overflow-hidden rounded-xl"
-                          >
-                            <Image
-                              src={src}
-                              alt={`${service.title} image ${idx + 1}`}
-                              fill
-                              className="object-cover"
-                              sizes="(min-width: 1024px) 50vw, 100vw"
-                            />
-                          </motion.div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="flex h-full items-center justify-center p-6 text-sm text-muted">
-                        Images coming soon
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </Container>
-    </section>
+</section>
   )
 }

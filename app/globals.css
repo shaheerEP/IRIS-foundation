@@ -182,7 +182,7 @@
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.89); /* ⬅ adjust opacity here */
+    background: rgba(255, 255, 255, 0.014); /* ⬅ adjust opacity here */
     pointer-events: none;
     z-index: -1;
     backdrop-filter: none;
