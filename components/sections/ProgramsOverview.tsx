@@ -18,7 +18,7 @@ const programs = [
     description: "A modern international school offering quality education with global standards and holistic development.",
     stats: "1 Campus",
     statsLabel: "Est. 2022",
-    image: "/hqma-1.jpg", 
+    image: "/desert.jpg", 
   },
   {
     icon: <GraduationCap className="w-8 h-8 text-violet-700" />,
@@ -29,7 +29,7 @@ const programs = [
     description: "A residential academy where children memorize the Qur’an while continuing mainstream studies.",
     stats: "Residency",
     statsLabel: "Est. 2022",
-    image: "/hqma-2.jpg",
+    image: "/center-1.jpg",
   },
   {
     icon: <Users className="w-8 h-8 text-emerald-700" />,
@@ -40,7 +40,7 @@ const programs = [
     description: "Village maktabs providing basic Islamic learning and academic support to remote areas.",
     stats: "500+",
     statsLabel: "Students",
-    image: "/maktab-1.jpg",
+    image: "/education-3.jpg",
   },
   {
     icon: <Award className="w-8 h-8 text-amber-700" />,
@@ -51,7 +51,7 @@ const programs = [
     description: "Training young men and women to become community leaders and social workers.",
     stats: "200+",
     statsLabel: "Fellows",
-    image: "/fellow-1.jpg",
+    image: "/training-1.jpg",
   },
   {
     icon: <Building className="w-8 h-8 text-rose-700" />,

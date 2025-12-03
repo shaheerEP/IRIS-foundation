@@ -74,6 +74,12 @@ export default function Home() {
         <ProgramsOverview />
       </AnimatedSection>
 
+
+
+       <AnimatedSection>
+        <HomeServicesOverview />
+      </AnimatedSection>
+
             {/* CTA SECTION */}
 <AnimatedSection>
   {/* Changed bg-white to bg-white/80 for transparency and added backdrop-blur */}
@@ -107,11 +113,6 @@ export default function Home() {
     </Container>
   </section>
 </AnimatedSection>
-
-       <AnimatedSection>
-        <HomeServicesOverview />
-      </AnimatedSection>
-
 
     </>
   )
