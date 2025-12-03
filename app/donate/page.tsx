@@ -96,49 +96,85 @@ export default function DonatePage() {
             ))}
           </div>
 
-          {/* Bank transfer details - Glass Card */}
-          <div className="rounded-2xl p-8 mt-16 max-w-2xl mx-auto bg-white/40 backdrop-blur-lg border border-white/50 shadow-2xl relative overflow-hidden">
-            {/* Optional shine effect on the bank card */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent" />
-            
-            <div className="flex items-center gap-4 mb-6 relative z-10">
-              <Building className="w-8 h-8 text-primary" />
-              <h3 className="text-xl font-bold text-foreground">Bank Transfer Details</h3>
-            </div>
-            <p className="text-foreground/80 font-medium mb-6 relative z-10">You can also donate directly via bank transfer using the details below:</p>
-            
-            <div className="grid sm:grid-cols-2 gap-4 relative z-10">
-              {/* Inner cards are slightly more opaque for readability */}
-              <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
-                <p className="text-xs uppercase tracking-wider text-muted mb-1">Bank Name</p>
-                <p className="font-bold text-foreground">{bankDetails.bankName}</p>
-              </div>
-              <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
-                <p className="text-xs uppercase tracking-wider text-muted mb-1">Account Name</p>
-                <p className="font-bold text-foreground">{bankDetails.accountName}</p>
-              </div>
-              <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
-                <p className="text-xs uppercase tracking-wider text-muted mb-1">Account Number</p>
-                <p className="font-bold text-foreground">{bankDetails.accountNumber}</p>
-              </div>
-              <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
-                <p className="text-xs uppercase tracking-wider text-muted mb-1">IFSC Code</p>
-                <p className="font-bold text-foreground">{bankDetails.ifscCode}</p>
-              </div>
-            </div>
-            <p className="text-sm text-foreground/70 mt-4 font-medium text-center">Branch: {bankDetails.branch}</p>
-            {/* UPI Donate Button */}
-<div className="flex justify-center mt-12">
-  <a
-    href="upi://pay?pa=Vyapar.169031370951@hdfcbank&pn=IRIS"
-    className="px-8 py-4 rounded-xl bg-primary text-white font-semibold shadow-xl
-               hover:bg-primary/90 transition-all duration-300 text-lg
-               backdrop-blur-md bg-primary/90">
-    Donate via UPI
-  </a>
+     {/* Bank transfer details - Glass Card */}
+<div className="rounded-2xl p-8 mt-16 max-w-3xl mx-auto bg-white/40 backdrop-blur-lg border border-white/50 shadow-2xl relative overflow-hidden">
+
+  {/* Shine line */}
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+
+  {/* Heading */}
+  <div className="flex items-center gap-4 mb-6 relative z-10">
+    <Building className="w-8 h-8 text-primary" />
+    <h3 className="text-xl md:text-2xl font-bold text-foreground">Bank Transfer Details</h3>
+  </div>
+
+  <p className="text-foreground/80 font-medium mb-6 relative z-10">
+    You can also donate directly via bank transfer using the details below:
+  </p>
+
+  {/* Bank details grid */}
+  <div className="grid sm:grid-cols-2 gap-4 relative z-10">
+    <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
+      <p className="text-xs uppercase tracking-wider text-muted mb-1">Bank Name</p>
+      <p className="font-bold text-foreground">{bankDetails.bankName}</p>
+    </div>
+
+    <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
+      <p className="text-xs uppercase tracking-wider text-muted mb-1">Account Name</p>
+      <p className="font-bold text-foreground">{bankDetails.accountName}</p>
+    </div>
+
+    <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
+      <p className="text-xs uppercase tracking-wider text-muted mb-1">Account Number</p>
+      <p className="font-bold text-foreground">{bankDetails.accountNumber}</p>
+    </div>
+
+    <div className="p-4 bg-white/60 border border-white/40 rounded-lg shadow-sm">
+      <p className="text-xs uppercase tracking-wider text-muted mb-1">IFSC Code</p>
+      <p className="font-bold text-foreground">{bankDetails.ifscCode}</p>
+    </div>
+  </div>
+
+  <p className="text-sm text-foreground/70 mt-4 font-medium text-center">
+    Branch: {bankDetails.branch}
+  </p>
+
+  {/* QR SECTION */}
+  <div className="mt-12 text-center">
+    <h4 className="text-lg md:text-xl font-semibold text-foreground mb-2">Scan & Pay</h4>
+
+    <p className="text-muted font-medium mb-4 text-sm md:text-base">
+      UPI ID: <span className="font-bold text-foreground">Vyapar.169031370951@hdfcbank</span>
+    </p>
+
+    <div className="flex justify-center">
+      <Image
+        src="/qr.png"
+        alt="UPI QR Code"
+        width={260}   // Larger for desktop
+        height={260}
+        className="rounded-2xl shadow-xl border border-white/50 bg-white/70 backdrop-blur-md p-4
+                   w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 transition-all"
+      />
+    </div>
+  </div>
+
+  {/* UPI Donate Button */}
+  <div className="flex justify-center mt-10">
+    <a
+      href="upi://pay?pa=Vyapar.169031370951@hdfcbank&pn=IRIS"
+      className="px-10 py-4 rounded-xl bg-primary text-white font-semibold shadow-xl
+                 hover:bg-primary/90 transition-all duration-300 text-lg backdrop-blur-md"
+    >
+      Donate via UPI
+    </a>
+  </div>
+
 </div>
 
-          </div>
+
+
+
         </Container>
       </section>
 
