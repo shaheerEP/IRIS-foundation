@@ -131,20 +131,7 @@ export default function DonatePage() {
         </Container>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 bg-primary">
-        <Container size="large">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-2">Have Questions?</h3>
-              <p className="text-white/70">Our team is happy to help you with your donation.</p>
-            </div>
-            <Button href="/contact" variant="glass" size="lg">
-              Contact Us
-            </Button>
-          </div>
-        </Container>
-      </section>
+      
     </>
   )
 }

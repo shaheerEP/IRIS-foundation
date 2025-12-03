@@ -150,20 +150,7 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* Footer CTA */}
-      <section className="py-16 bg-primary">
-        <Container size="large">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-2">Want to support our work?</h3>
-              <p className="text-white/70">Your contribution helps us expand our reach and impact.</p>
-            </div>
-            <Button href="/donate" variant="glass" size="lg">
-              Donate Now
-            </Button>
-          </div>
-        </Container>
-      </section>
+    
     </>
   )
 }

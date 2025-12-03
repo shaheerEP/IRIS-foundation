@@ -41,7 +41,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image
             src="/hero.png"
-            alt="About IRIS Foundation"
+            alt=""
             fill
             className="object-cover"
           />

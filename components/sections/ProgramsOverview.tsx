@@ -14,7 +14,16 @@ const programs = [
   {
     icon: <GraduationCap className="w-6 h-6 text-indigo-600" />,
     color: "bg-indigo-50 border-indigo-100",
-    title: "Hifzul Qur’an Academy",
+    title: "Ragasthan Model Academy",
+    description: "A residential academy where children memorize the Qur’an while continuing mainstream studies.",
+    stats: "Est. 2022 · 1 Campus",
+    // SCENARIO: 3 Images
+    images: ["/hqma-1.jpg", "/hqma-2.jpg", "/hqma-3.jpg"],
+  },
+  {
+    icon: <GraduationCap className="w-6 h-6 text-indigo-600" />,
+    color: "bg-indigo-50 border-indigo-100",
+    title: "Imam Rabbani Model Academy",
     description: "A residential academy where children memorize the Qur’an while continuing mainstream studies.",
     stats: "Est. 2022 · 1 Campus",
     // SCENARIO: 3 Images
@@ -23,7 +32,7 @@ const programs = [
   {
     icon: <Users className="w-6 h-6 text-emerald-600" />,
     color: "bg-emerald-50 border-emerald-100",
-    title: "Micro School Network",
+    title: "Micro learning center",
     description: "Village maktabs providing basic Islamic learning and academic support.",
     stats: "500+ Students · 15 Villages",
     // SCENARIO: 2 Images (The classic scatter)
