@@ -7,7 +7,6 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { siteConfig } from "@/lib/siteConfig"
-import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 
 export function Header() {
@@ -27,7 +26,10 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-lg shadow-lg py-3" : "bg-transparent py-5",
+        // UPDATED: Increased padding values below (py-5 and py-8) to increase height
+        isScrolled 
+          ? "bg-white/90 backdrop-blur-lg shadow-lg py-5" // increased from py-3
+          : "bg-transparent py-8", // increased from py-5
       )}
     >
       <Container size="large">
@@ -51,7 +53,6 @@ export function Header() {
                     className={cn(
                       "text-sm font-medium transition-colors duration-200",
                       isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white",
-                      // show primary color for current page (compare trimmed path)
                       isActive ? "text-primary" : "",
                     )}
                     aria-current={isActive ? "page" : undefined}

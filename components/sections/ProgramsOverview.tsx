@@ -7,7 +7,7 @@ import { SectionTitle } from "@/components/ui/SectionTitle"
 import { GraduationCap, School, Users, Award, Building } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-// Original Data Restored
+// Original Data Preserved
 const programs = [
   {
     icon: <School className="w-8 h-8 text-indigo-700" />,
@@ -91,37 +91,43 @@ export function ProgramsOverview() {
 function ProgramSection({ program, index }: { program: any; index: number }) {
   const isEven = index % 2 === 0
 
+  // LOGIC: 
+  // If isEven (Row 1, 3, 5): Slide entire row in from the LEFT (-100px)
+  // If !isEven (Row 2, 4): Slide entire row in from the RIGHT (100px)
+  const slideDirection = isEven ? -100 : 100
+
   return (
     <div className={cn(
       "flex flex-col gap-8 lg:gap-12 items-center justify-center",
-      // On Desktop: Alternating sides
+      // On Desktop: Alternating sides for layout (Image Left/Right)
       isEven ? "lg:flex-row" : "lg:flex-row-reverse"
     )}>
       
       {/* --- CONTENT SIDE --- */}
-      {/* Reduced width slightly (lg:w-[45%]) to make it more compact */}
       <motion.div 
         className="w-full lg:w-[45%] flex flex-col gap-4"
-        initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+        // Both sides now share the same 'x' variable to move in unison
+        initial={{ opacity: 0, x: slideDirection }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        // amount: 0.4 means 40% of the element must be visible before triggering
+        viewport={{ once: true, amount: 0.4 }}
+        // Increased duration to 0.9 for slower animation
+        transition={{ duration: 0.9, ease: "easeOut" }}
       >
         {/* Header */}
         <div className="flex items-center gap-3">
             {program.icon}
-            {/* Reduced Title Size */}
             <h3 className={cn("text-xl lg:text-2xl font-bold uppercase tracking-tight", program.color)}>
               {program.title}
             </h3>
         </div>
 
-        {/* Description: Reduced font size and max-width */}
+        {/* Description */}
         <p className="text-gray-600 text-base leading-relaxed text-justify lg:text-left max-w-lg">
           {program.description}
         </p>
 
-        {/* Stats Block - Compact Version */}
+        {/* Stats Block */}
         <div className="flex items-center gap-6 mt-2">
             <div className={cn(
               "px-5 py-2 rounded-lg border-l-4",
@@ -139,16 +145,17 @@ function ProgramSection({ program, index }: { program: any; index: number }) {
       </motion.div>
 
       {/* --- IMAGE SIDE --- */}
-      {/* Reduced width to lg:w-[40%] and aspect ratio to make it smaller */}
       <motion.div 
         className="w-full lg:w-[40%]"
-        initial={{ opacity: 0, x: isEven ? 30 : -30 }}
+        // Same direction as the text
+        initial={{ opacity: 0, x: slideDirection }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+        viewport={{ once: true, amount: 0.4 }}
+        // Added a tiny delay (0.2) so the image trails slightly behind the text for a polished look
+        transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
       >
         <div className="relative aspect-video w-full">
-            {/* Image Container: Rounded corners + Shadow */}
+            {/* Image Container */}
             <div className="absolute inset-0 rounded-[1.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 bg-gray-200 border-4 border-white">
                 <Image 
                     src={program.image} 
@@ -158,10 +165,10 @@ function ProgramSection({ program, index }: { program: any; index: number }) {
                 />
             </div>
             
-            {/* Decorative colored blob behind */}
+            {/* Decorative colored blob */}
             <div className={cn(
               "absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-[1.5rem] opacity-30",
-              program.bgAccent.replace('/80', '') // ensuring solid color background class
+              program.bgAccent.replace('/80', '') 
             )} />
         </div>
       </motion.div>

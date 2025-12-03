@@ -51,7 +51,7 @@ export function Hero({
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance tracking-tight"
           >
             {title}
           </motion.h1>
@@ -61,7 +61,7 @@ export function Hero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
-            className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed text-pretty"
+            className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed text-pretty font-light"
           >
             {subtitle}
           </motion.p>

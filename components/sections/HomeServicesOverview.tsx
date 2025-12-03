@@ -45,14 +45,14 @@ export  function HomeServicesOverview() {
     </span>
     
     {/* Title: Large, bold, purely white */}
-    <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
+    <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl tracking-tight">
       Holistic Community Development
     </h2>
   </div>
 
   <div className="mt-4 max-w-2xl mx-auto">
     {/* Paragraph: Changed text-gray-300 to text-white */}
-    <p className="text-sm md:text-base leading-relaxed text-white">
+    <p className="text-sm md:text-base leading-relaxed text-white font-light">
       The IRIS Foundation fosters holistic growth through child{" "}
       <strong className="text-white">Education</strong>, leadership{" "}
       <strong className="text-white">Training</strong>, and community{" "}

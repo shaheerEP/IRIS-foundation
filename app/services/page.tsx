@@ -35,8 +35,8 @@ export default function ServicesPage() {
         <div className="mt-4 max-w-2xl mx-auto">
           {/* Reduced text size to text-sm/text-base */}
           {/* Changed text-muted-foreground to text-gray-200 for a soft white look */}
-        <p className="text-sm md:text-base leading-relaxed text-gray-100">
-  The IRIS Foundation fosters holistic growth through child <strong className="text-white">Education</strong>, leadership <strong className="text-white">Training</strong>, and community <strong className="text-white">Cultural Centers</strong> in over 40 villages. We also address critical needs with winter <strong className="text-white">Relief</strong> drives, extensive <strong className="text-white">Food Feeding</strong> programs, and our <strong className="text-white">Drops of Life</strong> clean water projects—ensuring dignity and development go hand in hand.
+        <p className="text-sm md:text-base leading-relaxed text-gray-100 font-light">
+  The IRIS Foundation fosters holistic growth through child <strong className="text-white font-bold">Education</strong>, leadership <strong className="text-white font-bold">Training</strong>, and community <strong className="text-white font-bold">Cultural Centers</strong> in over 40 villages. We also address critical needs with winter <strong className="text-white font-bold">Relief</strong> drives, extensive <strong className="text-white font-bold">Food Feeding</strong> programs, and our <strong className="text-white font-bold">Drops of Life</strong> clean water projects—ensuring dignity and development go hand in hand.
 </p>
         </div>
       </Container>

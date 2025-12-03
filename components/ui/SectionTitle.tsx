@@ -22,7 +22,7 @@ export function SectionTitle({
       {label && (
         <span
           className={cn(
-            "inline-block text-sm font-semibold uppercase tracking-wider mb-3",
+            "inline-block text-sm font-bold uppercase tracking-widest mb-3",
             light ? "text-secondary-light" : "text-secondary",
           )}
         >
@@ -31,7 +31,7 @@ export function SectionTitle({
       )}
       <h2
         className={cn(
-          "text-3xl md:text-4xl lg:text-5xl font-bold text-balance",
+          "text-3xl md:text-4xl lg:text-5xl font-bold text-balance tracking-tight",
           light ? "text-white" : "text-foreground",
         )}
       >
@@ -40,7 +40,7 @@ export function SectionTitle({
       {subtitle && (
         <p
           className={cn(
-            "mt-4 text-lg md:text-xl max-w-3xl text-pretty",
+            "mt-4 text-lg md:text-xl max-w-3xl text-pretty font-light",
             centered && "mx-auto",
             light ? "text-white/80" : "text-muted",
           )}
