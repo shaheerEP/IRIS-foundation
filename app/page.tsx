@@ -75,8 +75,8 @@ export default function Home() {
       {/* CTA SECTION */}
       <AnimatedSection>
         <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary to-primary" />
-          <Container size="large" className="relative z-10">
+         <div className="absolute inset-0 bg-gradient-to-br from-secondary/70 via-secondary/60 to-primary/50" />
+  <Container size="large" className="relative z-10">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-balance">
                 Join Us in Making a Difference

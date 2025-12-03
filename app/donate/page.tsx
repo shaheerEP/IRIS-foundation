@@ -18,7 +18,7 @@ export default function DonatePage() {
       {/* Hero section */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/hero.png" alt="Donate" fill className="object-cover" />
+          <Image src="/hero.pn" alt="Donate" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-primary/80" />
         </div>
         <Container size="large" className="relative z-10 pt-24">
@@ -43,22 +43,22 @@ export default function DonatePage() {
           
           {/* Scattered Image 1: Top Left - Visible */}
           <div className="absolute -top-12 -left-12 w-96 h-96 opacity-20 rotate-12 blur-[1px] z-0">
-             <Image src="/hero.png" alt="" fill className="object-cover rounded-full grayscale mix-blend-multiply" />
+             <Image src="/hero.pn" alt="" fill className="object-cover rounded-full grayscale mix-blend-multiply" />
           </div>
 
           {/* Scattered Image 2: Right/Middle - Passing under cards */}
           <div className="absolute top-1/3 -right-20 w-[30rem] h-[30rem] opacity-15 -rotate-12 blur-sm z-0">
-             <Image src="/hero.png" alt="" fill className="object-cover rounded-[4rem] grayscale mix-blend-multiply" />
+             <Image src="/hero.pn" alt="" fill className="object-cover rounded-[4rem] grayscale mix-blend-multiply" />
           </div>
 
           {/* Scattered Image 3: Bottom Left - Large */}
           <div className="absolute bottom-0 left-10 w-[500px] h-[500px] opacity-15 rotate-6 blur-[2px] z-0">
-             <Image src="/hero.png" alt="" fill className="object-cover rounded-full grayscale mix-blend-multiply" />
+             <Image src="/hero.pn" alt="" fill className="object-cover rounded-full grayscale mix-blend-multiply" />
           </div>
 
            {/* Scattered Image 4: Center/Top - Detail */}
            <div className="absolute top-20 left-1/2 w-48 h-48 opacity-20 rotate-45 blur-[1px] z-0">
-             <Image src="/hero.png" alt="" fill className="object-cover rounded-3xl grayscale mix-blend-multiply" />
+             <Image src="/hero.pn" alt="" fill className="object-cover rounded-3xl grayscale mix-blend-multiply" />
           </div>
         </div>
         {/* --- SCATTERED BACKGROUND END --- */}
@@ -127,6 +127,17 @@ export default function DonatePage() {
               </div>
             </div>
             <p className="text-sm text-foreground/70 mt-4 font-medium text-center">Branch: {bankDetails.branch}</p>
+            {/* UPI Donate Button */}
+<div className="flex justify-center mt-12">
+  <a
+    href="upi://pay?pa=Vyapar.169031370951@hdfcbank&pn=IRIS"
+    className="px-8 py-4 rounded-xl bg-primary text-white font-semibold shadow-xl
+               hover:bg-primary/90 transition-all duration-300 text-lg
+               backdrop-blur-md bg-primary/90">
+    Donate via UPI
+  </a>
+</div>
+
           </div>
         </Container>
       </section>

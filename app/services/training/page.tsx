@@ -29,7 +29,7 @@ export default function TrainingPage() {
     <>
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/hero.png" alt="Training Programs" fill className="object-cover" />
+          <Image src="/hero.pn" alt="Training Programs" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-primary/70" />
         </div>
         <Container size="large" className="relative z-10 pt-24">

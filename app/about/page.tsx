@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/hero.png"
+            src="/hero.pn"
             alt=""
             fill
             className="object-cover"

@@ -20,7 +20,7 @@ export function Hero({
   subtitle,
   primaryCta,
   secondaryCta,
-  backgroundImage = "/hero.png",
+  backgroundImage = "/hero.pn",
   overlay = true,
   id,
 }: HeroProps) {
@@ -36,15 +36,10 @@ export function Hero({
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute inset-0 z-0"
       >
-        <Image
-          src={backgroundImage}
-          alt="Hero background"
-          fill
-          className="object-cover"
-          priority
-        />
+       
         {overlay && (
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-secondary/50" />
+         <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/40 to-secondary/30" />
+
         )}
       </motion.div>
 
