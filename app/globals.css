@@ -234,4 +234,18 @@
   .text-pretty {
     text-wrap: pretty;
   }
+
+  /* Islamic Arch Styles */
+  .arch-mask {
+     /* Pointed Arch (Ogee-like) approximation using clip-path */
+     /* This creates a pointed top */
+     -webkit-clip-path: polygon(0% 100%, 0% 35%, 50% 0%, 100% 35%, 100% 100%);
+     clip-path: polygon(0% 100%, 0% 35%, 50% 0%, 100% 35%, 100% 100%);
+     /* For a more curved look, we might need SVG or radial gradients, but polygon is robust for a "pointed" look */
+  }
+
+  .arch-rounded {
+      /* A softer arch */
+      border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  }
 }
