@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
+import Image from "next/image"
 
 const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"] })
 
@@ -43,6 +44,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
+        <div className="fixed inset-0 z-[-1]">
+          <Image
+            src="/new/home-bg1.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>

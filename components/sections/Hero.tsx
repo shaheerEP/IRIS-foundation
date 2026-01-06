@@ -4,6 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
+import { cn } from "@/lib/utils"
 
 interface HeroProps {
   title: string
@@ -13,6 +14,7 @@ interface HeroProps {
   backgroundImage?: string
   overlay?: boolean
   id?: string
+  sideImage?: string
 }
 
 export function Hero({
@@ -20,9 +22,10 @@ export function Hero({
   subtitle,
   primaryCta,
   secondaryCta,
-  backgroundImage = "/hero.pn",
+  backgroundImage,
   overlay = true,
   id,
+  sideImage,
 }: HeroProps) {
   return (
     <section
@@ -30,75 +33,123 @@ export function Hero({
       className="relative min-h-[100vh] flex items-center justify-center overflow-hidden"
     >
       {/* Background */}
-      <motion.div
-        initial={{ scale: 1.2, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+      <div
         className="absolute inset-0 z-0"
       >
-       
-        {overlay && (
-         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-secondary/50" />
-
+        {backgroundImage && (
+          <Image
+            src={backgroundImage}
+            alt="Hero Background"
+            fill
+            className="object-cover"
+            priority
+          />
         )}
-      </motion.div>
+        {overlay && (
+          <div className="absolute inset-0 z-10 bg-gradient-to-br from-black/80 via-black/70 to-black/50" />
+        )}
+      </div>
 
       {/* Content */}
-      <Container size="large" className="relative z-10 pt-20">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance tracking-tight"
-          >
-            {title}
-          </motion.h1>
+      <Container size="large" className="relative z-10 pt-32 lg:pt-20">
+        <div
+          className={cn(
+            "mx-auto",
+            sideImage
+              ? "grid lg:grid-cols-2 gap-12 items-center text-center lg:text-left"
+              : "max-w-5xl mx-auto text-center"
+          )}
+        >
+          {/* Text Content */}
+          <div className="flex flex-col justify-center">
+            {/* Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className={cn(
+                "text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight",
+                sideImage ? "text-balance" : "text-balance"
+              )}
+            >
+              {title}
+            </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
-            className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed text-pretty font-light"
-          >
-            {subtitle}
-          </motion.p>
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
+              className={cn(
+                "text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-light",
+                sideImage ? "max-w-xl mx-auto lg:mx-0" : "text-pretty"
+              )}
+            >
+              {subtitle}
+            </motion.p>
 
-          {/* Buttons with stagger */}
-          <motion.div
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: { opacity: 0 },
-              show: {
-                opacity: 1,
-                transition: { staggerChildren: 0.15 },
-              },
-            }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            {primaryCta && (
-              <motion.div
-                variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }}
-              >
-                <Button href={primaryCta.href} variant="secondary" size="lg">
-                  {primaryCta.label}
-                </Button>
-              </motion.div>
-            )}
+            {/* Buttons */}
+            <motion.div
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.15 },
+                },
+              }}
+              className={cn(
+                "flex flex-col sm:flex-row gap-4",
+                sideImage ? "items-center justify-center lg:justify-start" : "items-center justify-center"
+              )}
+            >
+              {primaryCta && (
+                <motion.div
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    show: { y: 0, opacity: 1 },
+                  }}
+                >
+                  <Button href={primaryCta.href} variant="secondary" size="lg">
+                    {primaryCta.label}
+                  </Button>
+                </motion.div>
+              )}
 
-            {secondaryCta && (
-              <motion.div
-                variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }}
-              >
-                <Button href={secondaryCta.href} variant="glass" size="lg">
-                  {secondaryCta.label}
-                </Button>
-              </motion.div>
-            )}
-          </motion.div>
+              {secondaryCta && (
+                <motion.div
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    show: { y: 0, opacity: 1 },
+                  }}
+                >
+                  <Button href={secondaryCta.href} variant="glass" size="lg">
+                    {secondaryCta.label}
+                  </Button>
+                </motion.div>
+              )}
+            </motion.div>
+          </div>
+
+          {/* Side Image */}
+          {sideImage && (
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+              className="relative block mt-10 lg:mt-0"
+            >
+              <Image
+                src={sideImage}
+                alt={title}
+                width={600}
+                height={600}
+                className="object-contain drop-shadow-2xl mx-auto lg:mx-0"
+                priority
+              />
+            </motion.div>
+          )}
         </div>
       </Container>
     </section>

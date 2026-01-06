@@ -18,7 +18,7 @@ const programs = [
     description: "A modern international school offering quality education with global standards and holistic development.",
     stats: "1 Campus",
     statsLabel: "Est. 2022",
-    image: "/desert.jpg", 
+    image: "/desert.jpg",
   },
   {
     icon: <GraduationCap className="w-8 h-8 text-violet-700" />,
@@ -102,24 +102,24 @@ function ProgramSection({ program, index }: { program: any; index: number }) {
       // On Desktop: Alternating sides for layout (Image Left/Right)
       isEven ? "lg:flex-row" : "lg:flex-row-reverse"
     )}>
-      
+
       {/* --- CONTENT SIDE --- */}
-      <motion.div 
+      <motion.div
         className="w-full lg:w-[45%] flex flex-col gap-4"
         // Both sides now share the same 'x' variable to move in unison
         initial={{ opacity: 0, x: slideDirection }}
         whileInView={{ opacity: 1, x: 0 }}
         // amount: 0.4 means 40% of the element must be visible before triggering
         viewport={{ once: true, amount: 0.4 }}
-        // Increased duration to 0.9 for slower animation
-        transition={{ duration: 0.9, ease: "easeOut" }}
+        // Increased duration to 1.5 for slower animation
+        transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" as const }}
       >
         {/* Header */}
         <div className="flex items-center gap-3">
-            {program.icon}
-            <h3 className={cn("text-xl lg:text-2xl font-bold uppercase tracking-tight", program.color)}>
-              {program.title}
-            </h3>
+          {program.icon}
+          <h3 className={cn("text-xl lg:text-2xl font-bold uppercase tracking-tight", program.color)}>
+            {program.title}
+          </h3>
         </div>
 
         {/* Description */}
@@ -129,47 +129,47 @@ function ProgramSection({ program, index }: { program: any; index: number }) {
 
         {/* Stats Block */}
         <div className="flex items-center gap-6 mt-2">
-            <div className={cn(
-              "px-5 py-2 rounded-lg border-l-4",
-              program.bgAccent,
-              program.borderAccent
-            )}>
-                <span className={cn("block text-2xl font-extrabold", program.color)}>
-                    {program.stats}
-                </span>
-                <span className={cn("text-xs font-semibold uppercase opacity-80", program.color)}>
-                    {program.statsLabel}
-                </span>
-            </div>
+          <div className={cn(
+            "px-5 py-2 rounded-lg border-l-4",
+            program.bgAccent,
+            program.borderAccent
+          )}>
+            <span className={cn("block text-2xl font-extrabold", program.color)}>
+              {program.stats}
+            </span>
+            <span className={cn("text-xs font-semibold uppercase opacity-80", program.color)}>
+              {program.statsLabel}
+            </span>
+          </div>
         </div>
       </motion.div>
 
       {/* --- IMAGE SIDE --- */}
-      <motion.div 
+      <motion.div
         className="w-full lg:w-[40%]"
         // Same direction as the text
         initial={{ opacity: 0, x: slideDirection }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         // Added a tiny delay (0.2) so the image trails slightly behind the text for a polished look
-        transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+        transition={{ duration: 1.5, ease: "easeOut" as const, delay: 0.7 }}
       >
         <div className="relative aspect-video w-full">
-            {/* Image Container */}
-            <div className="absolute inset-0 rounded-[1.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 bg-gray-200 border-4 border-white">
-                <Image 
-                    src={program.image} 
-                    alt={program.title}
-                    fill
-                    className="object-cover transition-transform duration-700 hover:scale-110"
-                />
-            </div>
-            
-            {/* Decorative colored blob */}
-            <div className={cn(
-              "absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-[1.5rem] opacity-30",
-              program.bgAccent.replace('/80', '') 
-            )} />
+          {/* Image Container */}
+          <div className="absolute inset-0 rounded-[1.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 bg-gray-200 border-4 border-white">
+            <Image
+              src={program.image}
+              alt={program.title}
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-110"
+            />
+          </div>
+
+          {/* Decorative colored blob */}
+          <div className={cn(
+            "absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-[1.5rem] opacity-30",
+            program.bgAccent.replace('/80', '')
+          )} />
         </div>
       </motion.div>
 

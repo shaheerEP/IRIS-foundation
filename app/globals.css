@@ -4,7 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: transparent; /* background handled by hero image */
+  --background: transparent;
+  /* background handled by hero image */
   --foreground: #111827;
   --card: rgba(255, 255, 255, 0.7);
   --card-foreground: #111827;
@@ -169,12 +170,6 @@
 
   body {
     @apply text-foreground antialiased relative;
-
-    background-image: url("/hero.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
   }
 
   /* Background dimming overlay to reduce image opacity */
@@ -182,7 +177,8 @@
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.014); /* ⬅ adjust opacity here */
+    background: rgba(255, 255, 255, 0.014);
+    /* ⬅ adjust opacity here */
     pointer-events: none;
     z-index: -1;
     backdrop-filter: none;
@@ -237,15 +233,15 @@
 
   /* Islamic Arch Styles */
   .arch-mask {
-     /* Pointed Arch (Ogee-like) approximation using clip-path */
-     /* This creates a pointed top */
-     -webkit-clip-path: polygon(0% 100%, 0% 35%, 50% 0%, 100% 35%, 100% 100%);
-     clip-path: polygon(0% 100%, 0% 35%, 50% 0%, 100% 35%, 100% 100%);
-     /* For a more curved look, we might need SVG or radial gradients, but polygon is robust for a "pointed" look */
+    /* Pointed Arch (Ogee-like) approximation using clip-path */
+    /* This creates a pointed top */
+    -webkit-clip-path: polygon(0% 100%, 0% 35%, 50% 0%, 100% 35%, 100% 100%);
+    clip-path: polygon(0% 100%, 0% 35%, 50% 0%, 100% 35%, 100% 100%);
+    /* For a more curved look, we might need SVG or radial gradients, but polygon is robust for a "pointed" look */
   }
 
   .arch-rounded {
-      /* A softer arch */
-      border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+    /* A softer arch */
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0;
   }
 }
