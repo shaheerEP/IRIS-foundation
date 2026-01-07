@@ -41,14 +41,14 @@ export default function DonatePage() {
         {/* Wave SVG */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
           <svg className="relative block w-full h-[60px] sm:h-[120px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" className="fill-white"/>
+            <path d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" className="fill-white" />
           </svg>
         </div>
       </section>
 
       {/* --- MAIN CONTENT --- */}
       <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
-        
+
         {/* Background Elements */}
         <div className="pointer-events-none absolute inset-0 w-full h-full overflow-hidden select-none">
           <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background z-10" />
@@ -65,7 +65,7 @@ export default function DonatePage() {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-8 items-start">
-            
+
             {/* --- LEFT COLUMN: Donation Options --- */}
             <div className="lg:col-span-7 grid gap-6 md:grid-cols-2">
               {donationOptions.map((option, index) => (
@@ -85,12 +85,11 @@ export default function DonatePage() {
                         {option.description}
                       </p>
                     </div>
-                    
+
                     {/* --- DYNAMIC VISIBILITY BUTTON --- */}
                     {/* Logic: opacity-100 (visible on mobile) -> lg:opacity-0 (hidden on desktop) -> lg:group-hover:opacity-100 (visible on hover) */}
-                    <div className="mt-6 pt-6 border-t border-dashed border-black/10 transition-all duration-300 transform 
-                                    opacity-100 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
-                      <a 
+                    <div className="mt-6 pt-6 border-t border-dashed border-black/10 lg:hidden">
+                      <a
                         href={createUpiLink(option.amount)}
                         className="inline-flex items-center justify-between w-full text-primary font-semibold group/btn"
                       >
@@ -99,7 +98,7 @@ export default function DonatePage() {
                           Select this plan
                         </span>
                         <span className="p-2 rounded-full bg-primary/10 text-primary group-hover/btn:bg-primary group-hover/btn:text-white transition-all duration-300">
-                           <ArrowRight className="w-4 h-4" />
+                          <ArrowRight className="w-4 h-4" />
                         </span>
                       </a>
                     </div>
@@ -113,7 +112,7 @@ export default function DonatePage() {
             <div className="lg:col-span-5 relative">
               <div className="sticky top-24">
                 <div className="rounded-2xl p-8 bg-white/40 backdrop-blur-lg border border-white/50 shadow-2xl relative overflow-hidden">
-                  
+
                   {/* Shine line */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
@@ -130,7 +129,7 @@ export default function DonatePage() {
 
                   {/* Bank Details Grid */}
                   <div className="space-y-4">
-                     <div className="p-3 bg-white/60 border border-white/40 rounded-lg shadow-sm">
+                    <div className="p-3 bg-white/60 border border-white/40 rounded-lg shadow-sm">
                       <p className="text-[10px] uppercase tracking-wider text-muted-foreground mb-1">Account Number</p>
                       <p className="font-bold text-lg text-foreground tracking-wide">{bankDetails.accountNumber}</p>
                     </div>
@@ -159,24 +158,24 @@ export default function DonatePage() {
                   {/* --- QR CODE SECTION (RESTORED WITH UPI LABEL) --- */}
                   <div className="flex flex-col items-center">
                     <div className="relative group cursor-pointer">
-                        {/* Glow effect */}
-                        <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                        <Image
-                          src="/qr.png"
-                          alt="UPI QR Code"
-                          width={200}
-                          height={200}
-                          className="relative rounded-xl shadow-sm border border-white/50 bg-white p-2 w-48 h-48"
-                        />
+                      {/* Glow effect */}
+                      <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                      <Image
+                        src="/qr.png"
+                        alt="UPI QR Code"
+                        width={200}
+                        height={200}
+                        className="relative rounded-xl shadow-sm border border-white/50 bg-white p-2 w-48 h-48"
+                      />
                     </div>
-                    
+
                     <p className="text-xs text-muted-foreground font-medium mt-4 bg-white/50 px-3 py-1 rounded-full border border-white/50">
                       UPI ID: <span className="select-all font-bold text-foreground">Vyapar.169031370951@hdfcbank</span>
                     </p>
                   </div>
 
                   {/* General Donate Button */}
-                  <div className="mt-8">
+                  <div className="mt-8 lg:hidden">
                     <a
                       href="upi://pay?pa=Vyapar.169031370951@hdfcbank&pn=IRIS&cu=INR"
                       className="flex items-center justify-center w-full py-4 rounded-xl bg-primary text-white font-semibold shadow-lg shadow-primary/20
@@ -189,7 +188,7 @@ export default function DonatePage() {
                 </div>
               </div>
             </div>
-            
+
           </div>
         </Container>
       </section>

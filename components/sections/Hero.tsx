@@ -46,7 +46,10 @@ export function Hero({
           />
         )}
         {overlay && (
-          <div className="absolute inset-0 z-10 bg-gradient-to-br from-black/80 via-black/70 to-black/50" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-primary/90 to-secondary/70" />
+
+          // <div className="absolute inset-0 z-10 bg-gradient-to-br from-black/80 via-black/70 to-black/50" />
+
         )}
       </div>
 

@@ -6,6 +6,7 @@ import { SectionTitle } from "@/components/ui/SectionTitle"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 import { CheckCircle2, MapPin, Mail, Globe, Phone } from "lucide-react"
 
 export default function MIRPage() {
@@ -92,8 +93,11 @@ export default function MIRPage() {
                             variants={fadeInRight}
                             className="relative h-[500px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg arch-mask"
                         >
-                            <span className="text-muted-foreground mt-20">Founder Image Space</span>
-                            {/* <Image src="/path-to-founder-image.jpg" alt="Dr. Muhammed Abdul Hakkim Azhari" fill className="object-cover" /> */}
+
+                            <Image src="/new/hkmustd.png"
+                                alt="Dr. Muhammed Abdul Hakkim Azhari"
+                                fill className="object-cover" />
+
                         </motion.div>
                     </div>
                 </Container>
@@ -182,7 +186,12 @@ export default function MIRPage() {
                             variants={fadeInLeft}
                             className="relative h-[400px] w-full bg-white overflow-hidden flex items-center justify-center border shadow-lg arch-mask"
                         >
-                            <span className="text-muted-foreground mt-20">Campus/Facility Image Space</span>
+                            <Image
+                                src="/new/facility.jpg"
+                                alt="Campus Facility"
+                                fill
+                                className="object-cover"
+                            />
                         </motion.div>
                         <div className="overflow-hidden">
                             <motion.div

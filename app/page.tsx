@@ -9,14 +9,27 @@ import { Button } from "@/components/ui/button"
 import { SectionTitle } from "@/components/ui/SectionTitle"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
+        router.push('/mir')
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [router])
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, delay: 0.5, ease: "easeOut" as const }
+      transition: { duration: 1.5, delay: 0.3, ease: "easeOut" as const }
     }
   }
 
@@ -25,7 +38,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1.5, delay: 0.5, ease: "easeOut" as const }
+      transition: { duration: 1.5, delay: 0.3, ease: "easeOut" as const }
     }
   }
 
@@ -34,7 +47,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1.5, delay: 0.5, ease: "easeOut" as const }
+      transition: { duration: 1.5, delay: 0.3, ease: "easeOut" as const }
     }
   }
 
@@ -45,7 +58,7 @@ export default function Home() {
         id="home"
         title="Touching Hearts, Changing Lives"
         subtitle="IRIS Foundation is dedicated to supporting education and social uplift in underprivileged villages across India. Together, we can create lasting change."
-        sideImage="/new/above.png"
+        sideImage="/new/above (2).png"
         backgroundImage="/new/home-bg2.jpg"
       />
 
