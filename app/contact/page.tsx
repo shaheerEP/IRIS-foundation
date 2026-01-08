@@ -40,14 +40,14 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-return (
+  return (
     <>
       {/* SECTION 1: Added pb-24 sm:pb-32 to make room for the wave */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden pb-24 sm:pb-32">
         <div className="absolute inset-0">
-           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/70" />
         </div>
-        
+
         <Container size="large" className="relative z-10 pt-24">
           <SectionTitle
             label="Contact"
@@ -59,16 +59,16 @@ return (
 
         {/* --- WAVE SVG START --- */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
-          <svg 
-            className="relative block w-full h-[60px] sm:h-[120px]" 
-            data-name="Layer 1" 
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 1440 320" 
+          <svg
+            className="relative block w-full h-[60px] sm:h-[120px]"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
             preserveAspectRatio="none"
           >
-            <path 
-              d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" 
-              className="fill-white" 
+            <path
+              d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+              className="fill-white"
             />
           </svg>
         </div>
@@ -227,7 +227,7 @@ return (
                   />
                 </div>
 
-                <Button type="submit" variant="primary" className="w-full" disabled={status === "loading"}>
+                <Button type="submit" variant="default" className="w-full" disabled={status === "loading"}>
                   {status === "loading" ? (
                     "Sending..."
                   ) : (
@@ -244,5 +244,5 @@ return (
       </section>
 
     </>
-)
+  )
 }

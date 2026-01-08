@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
-        router.push('/mir')
+        router.push('/mir?transition=auto-scroll')
       }
     }
     window.addEventListener("scroll", handleScroll)
@@ -29,7 +29,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.5, delay: 0.3, ease: "easeOut" as const }
+      transition: { duration: 1.5, delay: 0.2, ease: "easeOut" as const }
     }
   }
 
@@ -38,7 +38,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1.5, delay: 0.3, ease: "easeOut" as const }
+      transition: { duration: 1.5, delay: 0.2, ease: "easeOut" as const }
     }
   }
 
@@ -47,7 +47,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1.5, delay: 0.3, ease: "easeOut" as const }
+      transition: { duration: 1.5, delay: 0.2, ease: "easeOut" as const }
     }
   }
 
@@ -58,7 +58,7 @@ export default function Home() {
         id="home"
         title="Touching Hearts, Changing Lives"
         subtitle="IRIS Foundation is dedicated to supporting education and social uplift in underprivileged villages across India. Together, we can create lasting change."
-        sideImage="/new/above (2).png"
+        //  sideImage="/new/above (2).png"
         backgroundImage="/new/home-bg2.jpg"
       />
 

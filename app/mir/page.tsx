@@ -9,13 +9,15 @@ import Link from "next/link"
 import Image from "next/image"
 import { CheckCircle2, MapPin, Mail, Globe, Phone } from "lucide-react"
 
+import { PageTransitionToast } from "@/components/ui/PageTransitionToast"
+
 export default function MIRPage() {
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 1.5, ease: "easeOut" }
+            transition: { duration: 0.6, ease: "easeOut" as const }
         }
     }
 
@@ -24,7 +26,7 @@ export default function MIRPage() {
         visible: {
             opacity: 1,
             x: 0,
-            transition: { duration: 1.5, ease: "easeOut" }
+            transition: { duration: 1.5, delay: 0.2, ease: "easeOut" as const }
         }
     }
 
@@ -33,7 +35,7 @@ export default function MIRPage() {
         visible: {
             opacity: 1,
             x: 0,
-            transition: { duration: 1.5, ease: "easeOut" }
+            transition: { duration: 1.5, delay: 0.2, ease: "easeOut" as const }
         }
     }
 
@@ -103,7 +105,7 @@ export default function MIRPage() {
             </section>
 
             {/* About, Vision & Inspiration */}
-            <section className="py-24 mt-96 bg-slate-50">
+            <section className="py-24 mt-96 bg-primary">
                 <Container size="large">
                     <motion.div
                         variants={staggerContainer}
@@ -112,21 +114,21 @@ export default function MIRPage() {
                         viewport={{ once: true, amount: 0.1 }}
                         className="grid md:grid-cols-3 gap-8"
                     >
-                        <motion.div variants={fadeInUp} className="glass-card p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
+                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
                             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
                             <h3 className="text-xl font-bold mb-4 text-primary text-center">About the Centre</h3>
                             <p className="text-muted-foreground">
                                 The Imam Rabbani Centre for Education & Guidance, located in the spiritually rich city of Sirhind, Punjab, stands as a pioneering institution offering a harmonious blend of Islamic scholarship and modern academic education. Our vision is to provide an integrated learning environment where faith and intellect work together to produce balanced, purpose-driven individuals.
                             </p>
                         </motion.div>
-                        <motion.div variants={fadeInUp} className="glass-card p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
+                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
                             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
                             <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Vision</h3>
                             <p className="text-muted-foreground">
                                 At the Imam Rabbani Centre for Education & Guidance, we believe that true education doesn't merely inform—it transforms. We combine knowledge with ethics, and learning with leadership, to prepare students who are spiritually grounded, socially responsible, and intellectually empowered.
                             </p>
                         </motion.div>
-                        <motion.div variants={fadeInUp} className="glass-card p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
+                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
                             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
                             <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Inspiration</h3>
                             <p className="text-muted-foreground">
@@ -175,7 +177,7 @@ export default function MIRPage() {
             </section>
 
             {/* Why Choose Us */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-primary text-primary-foreground">
                 <Container size="large">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div
@@ -203,6 +205,7 @@ export default function MIRPage() {
                                     label="Benefits"
                                     title="Why Choose Us?"
                                     subtitle="We offer more than just a degree."
+                                    light
                                 />
                             </motion.div>
                             <motion.div
@@ -223,8 +226,8 @@ export default function MIRPage() {
                                     "Environment: A safe, moral, and inspiring learning environment."
                                 ].map((item, i) => (
                                     <motion.div key={i} variants={fadeInUp} className="flex items-start gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                                        <span className="text-foreground/80">{item}</span>
+                                        <CheckCircle2 className="w-5 h-5 text-secondary-light flex-shrink-0 mt-1" />
+                                        <span className="text-primary-foreground/90">{item}</span>
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -234,7 +237,7 @@ export default function MIRPage() {
             </section>
 
             {/* Programs Offered */}
-            <section id="programs" className="pb-24 bg-white">
+            <section id="programs" className="py-24 bg-white">
                 <Container size="large">
                     <motion.div
                         initial="hidden"
@@ -334,15 +337,15 @@ export default function MIRPage() {
                         variants={fadeInUp}
                     >
                         <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Join Our Mission?</h2>
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                            <Button asChild variant="secondary" className="w-full h-auto py-4 whitespace-normal text-center">
+                        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+                            <Button asChild variant="secondary" className="w-full sm:w-auto py-4 px-8 whitespace-normal text-center">
                                 <Link href="https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog">Register for Admission</Link>
                             </Button>
 
-                            <Button asChild variant="outline" className="w-full h-auto py-4 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                            <Button asChild variant="outline" className="w-full sm:w-auto py-4 px-8 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                                 <Link href="/contact">Volunteer / Contribute</Link>
                             </Button>
-                            <Button asChild variant="outline" className="w-full h-auto py-4 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                            <Button asChild variant="outline" className="w-full sm:w-auto py-4 px-8 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                                 <Link href="/donate">Support a Student</Link>
                             </Button>
                         </div>

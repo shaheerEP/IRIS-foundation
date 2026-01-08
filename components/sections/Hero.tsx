@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
@@ -114,8 +115,10 @@ export function Hero({
                     show: { y: 0, opacity: 1 },
                   }}
                 >
-                  <Button href={primaryCta.href} variant="secondary" size="lg">
-                    {primaryCta.label}
+                  <Button asChild variant="secondary" size="lg">
+                    <Link href={primaryCta.href}>
+                      {primaryCta.label}
+                    </Link>
                   </Button>
                 </motion.div>
               )}
@@ -127,8 +130,10 @@ export function Hero({
                     show: { y: 0, opacity: 1 },
                   }}
                 >
-                  <Button href={secondaryCta.href} variant="glass" size="lg">
-                    {secondaryCta.label}
+                  <Button asChild variant="glass" size="lg">
+                    <Link href={secondaryCta.href}>
+                      {secondaryCta.label}
+                    </Link>
                   </Button>
                 </motion.div>
               )}

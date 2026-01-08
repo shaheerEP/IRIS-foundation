@@ -109,15 +109,24 @@ export function Header() {
                     className={cn(
                       "transition-all duration-300",
                       isMir
-                        ? "px-6 py-2 rounded-full font-bold text-base shadow-lg transform hover:scale-105 active:scale-95 bg-primary text-white hover:bg-primary/90"
+                        ? cn(
+                          isActive
+                            ? "px-6 py-2 rounded-full bg-primary text-white shadow-lg hover:bg-primary/90" // Active MIR: Solid Button
+                            : cn(
+                              "text-2xl font-extrabold tracking-wide transform hover:scale-110", // Inactive MIR: Large Bold Text
+                              isScrolled ? "text-primary" : "text-white drop-shadow-md"
+                            )
+                        )
                         : cn(
-                          "text-sm font-medium",
+                          "text-sm font-medium px-4 py-1.5 rounded-full border-2 transition-all duration-300",
                           // Base colors (Inactive)
                           isScrolled
-                            ? "text-foreground/80 hover:text-primary"
-                            : "text-white/90 hover:text-white",
+                            ? "border-transparent text-foreground/80 hover:text-primary hover:bg-slate-50"
+                            : "border-transparent text-white/90 hover:text-white hover:bg-white/10",
                           // Active color (Overrides base if active)
-                          isActive ? "text-primary" : "",
+                          isActive
+                            ? "border-primary text-primary bg-primary/5"
+                            : "",
                         )
                     )}
                     aria-current={isActive ? "page" : undefined}

@@ -14,7 +14,7 @@ export function Footer() {
 
         {/* MAIN GRID */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -74,30 +74,9 @@ export function Footer() {
             </ul>
           </motion.div>
 
-          {/* Column 3 */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <h4 className="font-semibold text-lg mb-4">Our Services</h4>
-            <ul className="space-y-3">
-              {siteConfig.serviceLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
 
-          {/* Column 4 */}
+
+          {/* Column 3 (Formerly 4) */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -105,7 +84,7 @@ export function Footer() {
             }}
             transition={{ duration: 0.5 }}
           >
-           
+            <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-secondary mt-0.5 flex-shrink-0" />
