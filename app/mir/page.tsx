@@ -53,8 +53,7 @@ export default function MIRPage() {
             <Hero
                 title="Imam Rabbani Center for Education & Guidance"
                 subtitle="The symbol signifies that knowledge is the bedrock of all social, cultural, and environmental sustainability in the universe."
-                primaryCta={{ label: "Register for Admission", href: "#programs" }}
-                secondaryCta={{ label: "Partner with Us", href: "#contact" }}
+                primaryCta={{ label: "Register for Admission", href: "https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog" }}
                 backgroundImage="/new/mir-hero-bg.png"
             // sideImage="/new/mir-hero.png"
             />
@@ -235,7 +234,7 @@ export default function MIRPage() {
             </section>
 
             {/* Programs Offered */}
-            <section id="programs" className="py-24 bg-white">
+            <section id="programs" className="pb-24 bg-white">
                 <Container size="large">
                     <motion.div
                         initial="hidden"
@@ -337,16 +336,14 @@ export default function MIRPage() {
                         <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Join Our Mission?</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
                             <Button asChild variant="secondary" className="w-full h-auto py-4 whitespace-normal text-center">
-                                <Link href="#register">Register for Admission</Link>
+                                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog">Register for Admission</Link>
+                            </Button>
+
+                            <Button asChild variant="outline" className="w-full h-auto py-4 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                                <Link href="/contact">Volunteer / Contribute</Link>
                             </Button>
                             <Button asChild variant="outline" className="w-full h-auto py-4 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                                <Link href="#partner">Partner with us</Link>
-                            </Button>
-                            <Button asChild variant="outline" className="w-full h-auto py-4 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                                <Link href="#volunteer">Volunteer / Contribute</Link>
-                            </Button>
-                            <Button asChild variant="outline" className="w-full h-auto py-4 whitespace-normal text-center bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                                <Link href="#sponsor">Support a Student</Link>
+                                <Link href="/donate">Support a Student</Link>
                             </Button>
                         </div>
                     </motion.div>
