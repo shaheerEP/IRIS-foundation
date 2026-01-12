@@ -59,7 +59,7 @@ export default function Home() {
         title="Touching Hearts, Changing Lives"
         subtitle="IRIS Foundation is dedicated to supporting education and social uplift in underprivileged villages across India. Together, we can create lasting change."
         //  sideImage="/new/above (2).png"
-        backgroundImage="/new/home-bg2.jpg"
+        backgroundImage="/new/home-bg3.jpeg"
       />
 
 
