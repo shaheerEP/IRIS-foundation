@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 // Original Data Preserved
 const programs = [
   {
-    icon: <Image src="/new/drs-logo.png" width={100} height={100} className="w-8 h-8 object-contain" alt="DRS Logo" />,
+    icon: <Image src="/new/drs-logo.png" width={48} height={48} className="w-12 h-12 object-contain" alt="DRS Logo" />,
     color: "text-rose-700",
     bgAccent: "bg-rose-50",
     borderAccent: "border-rose-500",
