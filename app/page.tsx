@@ -102,7 +102,7 @@ export default function Home() {
               <div className="relative">
                 <div className="glass-card rounded-3xl p-8">
                   <blockquote className="text-lg italic text-foreground/80 mb-4">
-                    “I was dispatched as a teacher”
+                    “Indeed i was sent as a teacher”
                   </blockquote>
                   <cite className="text-sm text-muted">— Prophet Muhammed (s)</cite>
                 </div>

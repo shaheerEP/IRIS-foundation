@@ -100,7 +100,6 @@ export function Header() {
             <nav className="flex items-center space-x-8">
               {siteConfig.navLinks.map((link) => {
                 const isActive = isLinkActive(link.href)
-                const isMir = link.label === "MIR"
 
                 return (
                   <Link
@@ -108,26 +107,15 @@ export function Header() {
                     href={link.href}
                     className={cn(
                       "transition-all duration-300",
-                      isMir
-                        ? cn(
-                          isActive
-                            ? "px-6 py-2 rounded-full bg-primary text-white shadow-lg hover:bg-primary/90" // Active MIR: Solid Button
-                            : cn(
-                              "text-2xl font-extrabold tracking-wide transform hover:scale-110", // Inactive MIR: Large Bold Text
-                              isScrolled ? "text-primary" : "text-white drop-shadow-md"
-                            )
-                        )
-                        : cn(
-                          "text-sm font-medium px-4 py-1.5 rounded-full border-2 transition-all duration-300",
-                          // Base colors (Inactive)
-                          isScrolled
-                            ? "border-transparent text-foreground/80 hover:text-primary hover:bg-slate-50"
-                            : "border-transparent text-white/90 hover:text-white hover:bg-white/10",
-                          // Active color (Overrides base if active)
-                          isActive
-                            ? "border-primary text-primary bg-primary/5"
-                            : "",
-                        )
+                      "text-sm font-medium px-4 py-1.5 rounded-full border-2 transition-all duration-300",
+                      // Base colors (Inactive)
+                      isScrolled
+                        ? "border-transparent text-foreground/80 hover:text-primary hover:bg-slate-50"
+                        : "border-transparent text-white/90 hover:text-white hover:bg-white/10",
+                      // Active color (Overrides base if active)
+                      isActive
+                        ? "border-primary text-primary bg-primary/5"
+                        : "",
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
