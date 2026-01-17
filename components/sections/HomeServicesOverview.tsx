@@ -5,6 +5,17 @@ import Image from "next/image"
 import { Container } from "@/components/ui/Container"
 import { SectionTitle } from "@/components/ui/SectionTitle"
 import { motion } from "framer-motion"
+import { GraduationCap, Users, Landmark, HeartHandshake, Utensils, Droplets } from "lucide-react"
+
+// Service Icons Data
+const servicesList = [
+  { label: "Education", icon: GraduationCap },
+  { label: "Training", icon: Users },
+  { label: "Centers", icon: Landmark },
+  { label: "Relief", icon: HeartHandshake },
+  { label: "Feeding", icon: Utensils },
+  { label: "Water", icon: Droplets },
+]
 
 // Data
 const services = [
@@ -67,17 +78,29 @@ export function HomeServicesOverview() {
 
           <div className="mt-4 max-w-2xl mx-auto">
             {/* Paragraph: Changed text-gray-300 to text-white */}
+            {/* Paragraph: Changed text-gray-300 to text-white */}
             <p className="text-sm md:text-base leading-relaxed text-white font-light">
-              The IRIS Foundation fosters holistic growth through child{" "}
-              <strong className="text-white">Education</strong>, leadership{" "}
-              <strong className="text-white">Training</strong>, and community{" "}
-              <strong className="text-white">Cultural Centers</strong> in over 40
-              villages. We also address critical needs with winter{" "}
-              <strong className="text-white">Relief</strong> drives, extensive{" "}
-              <strong className="text-white">Food Feeding</strong> programs, and our{" "}
-              <strong className="text-white">Drops of Life</strong> clean water
-              projects—ensuring dignity and development go hand in hand.
+              The IRIS Foundation fosters holistic growth in over 40 villages. We address
+              critical community needs, ensuring dignity and development go hand in hand.
             </p>
+
+            {/* Service Cards Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mt-8">
+              {servicesList.map((service, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
+                  className="flex flex-col items-center justify-center p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 transition-colors duration-300"
+                >
+                  <div className="p-2 rounded-full bg-white/20 mb-2 text-white">
+                    <service.icon size={20} strokeWidth={1.5} />
+                  </div>
+                  <span className="text-xs font-medium text-white tracking-wide text-center">
+                    {service.label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </Container>

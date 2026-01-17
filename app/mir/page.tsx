@@ -77,13 +77,14 @@ export default function MIRPage() {
                             />
                             <div className="prose text-muted-foreground leading-relaxed">
                                 <p className="mb-4">
-                                    "At the heart of every revival lies a vision—an unwavering belief that transformation begins with education. The Imam Rabbani Centre for Education & Guidance was born from such a vision. Rooted in the historic soil of Sirhind, our mission is to cultivate a generation of young Muslims who are equally grounded in faith and prepared for the modern world.
+                                    <span className="text-5xl font-bold text-primary leading-none mr-2 float-left">"</span>At the heart of every revival lies a vision an unwavering belief that transformation begins with education. The Imam Rabbani Centre for Education & Guidance was born from such a vision. Rooted in the historic soil of Sirhind, our mission is to cultivate a generation of young Muslims who are equally grounded in faith and prepared for the modern world.
                                 </p>
                                 <p className="mb-4">
                                     We refuse to see a divide between sacred knowledge and worldly success; instead, we strive to nurture leaders who embody the balance, clarity, and purpose found in our Deen. This Centre is more than just an institution, it is a movement for the soul, the mind, and the community.
                                 </p>
                                 <p>
-                                    Inspired by the spiritual legacy of Hazrat Mujaddid Alf-Thani and the educational brilliance of the Kerala model, we offer a system that integrates Islamic values, academic excellence, and ethical leadership. It is our hope that this humble initiative contributes to the rise of a confident, educated, and spiritually aware Ummah. May Allah accept our efforts and make this Centre a beacon of guidance for generations to come."
+                                    Inspired by the spiritual legacy of Hazrat Mujaddid Alf-Thani and the educational brilliance of the Kerala model, we offer a system that integrates Islamic values, academic excellence, and ethical leadership. It is our hope that this humble initiative contributes to the rise of a confident, educated, and spiritually aware Ummah. May Allah accept our efforts and make this Centre a beacon of guidance for generations to come.
+                                    <span className="text-5xl font-bold text-primary leading-none mr-46 float-right">"</span>
                                 </p>
                             </div>
                         </motion.div>
@@ -163,9 +164,9 @@ export default function MIRPage() {
                     >
                         {[
                             { title: "Islamic Studies", desc: "Classical subjects including Qur'an, Hadith, Fiqh, and Aqidah." },
-                            { title: "Modern Curriculum", desc: "Subjects aligned with national education boards." },
-                            { title: "Tarbiyah & Adab", desc: "Daily discipline, mentorship, and spiritual development." },
-                            { title: "Leadership Training", desc: "Critical thinking, ethical reasoning, and community service." }
+                            { title: "Modern Curriculum", desc: "Subjects aligned with national education boards, taught using modern technologies." },
+                            { title: "Life Style and Etiquettes", desc: "Daily discipline, mentorship, and spiritual development." },
+                            { title: "Leadership", desc: "Critical thinking, ethical reasoning, and community service." }
                         ].map((item, i) => (
                             <motion.div key={i} variants={fadeInUp} className="p-6 border rounded-xl hover:shadow-lg transition-shadow bg-slate-50">
                                 <h4 className="font-bold text-lg mb-2 text-primary">{item.title}</h4>

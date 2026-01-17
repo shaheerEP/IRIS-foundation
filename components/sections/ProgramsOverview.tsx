@@ -10,6 +10,17 @@ import { cn } from "@/lib/utils"
 // Original Data Preserved
 const programs = [
   {
+    icon: <Image src="/new/kenza-logo.png" width={48} height={48} className="w-12 h-12 object-contain" alt="Kenza Logo" />,
+    color: "text-teal-700",
+    bgAccent: "bg-teal-50",
+    borderAccent: "border-teal-500",
+    title: "Kenza Preschool",
+    description: "A nurturing early childhood environment focused on play-based learning and foundational skills for toddlers.",
+    stats: "1 Campus",
+    statsLabel: "Est. 2022",
+    image: "/desert.jpg", // Update this if you have a specific photo
+  },
+  {
     icon: <Image src="/new/drs-logo.png" width={48} height={48} className="w-12 h-12 object-contain" alt="DRS Logo" />,
     color: "text-rose-700",
     bgAccent: "bg-rose-50",
@@ -18,7 +29,7 @@ const programs = [
     description: "A modern international school offering quality education with global standards and holistic development.",
     stats: "1 Campus",
     statsLabel: "Est. 2022",
-    image: "/desert.jpg",
+    image: "/new/kenza.png",
   },
   {
     icon: <GraduationCap className="w-8 h-8 text-violet-700" />,
@@ -71,9 +82,9 @@ export function ProgramsOverview() {
     <section id="programs" className="bg-slate-50 py-20 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-12">
         <SectionTitle
-          label="Our Impact"
-          title="Key Initiatives"
-          subtitle="Programs tailored to the needs of every village demographic."
+          label="Key Initiatives"
+          title="Programs"
+          subtitle="tailored to the needs of every village demographic."
           className="mb-16"
         />
 
