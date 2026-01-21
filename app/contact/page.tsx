@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/siteConfig"
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" })
+  const [formData, setFormData] = useState({ name: "", email: "", mobile: "", subject: "", message: "" })
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -27,7 +27,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setStatus("success")
-        setFormData({ name: "", email: "", subject: "", message: "" })
+        setFormData({ name: "", email: "", mobile: "", subject: "", message: "" })
       } else {
         setStatus("error")
       }
@@ -192,6 +192,21 @@ export default function ContactPage() {
                     required
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
                     placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="mobile" className="block text-sm font-medium text-foreground mb-2">
+                    Mobile Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                    placeholder="Your mobile number"
                   />
                 </div>
 
