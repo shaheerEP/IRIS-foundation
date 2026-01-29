@@ -60,6 +60,21 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+.mir-theme {
+  --primary: #128e6c;
+  --primary-light: #20a982;
+  --primary-dark: #0e6b51;
+  --primary-foreground: #ffffff;
+
+  --secondary: #6b6b6b;
+  --secondary-light: #858585;
+  --secondary-foreground: #ffffff;
+
+  --ring: #128e6c;
+  --border: #e2e8f0;
+  /* Keeping a light border for contrast */
+}
+
 .dark {
   --background: transparent;
   --foreground: oklch(0.985 0 0);

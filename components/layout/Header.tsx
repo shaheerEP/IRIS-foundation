@@ -15,6 +15,8 @@ export function Header() {
   const [activeSection, setActiveSection] = useState("")
   const pathname = usePathname()
 
+
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
@@ -73,6 +75,8 @@ export function Header() {
     return pathname === href
   }
 
+  if (pathname.startsWith("/mir")) return null
+
   return (
     <header
       className={cn(
@@ -100,6 +104,24 @@ export function Header() {
             <nav className="flex items-center space-x-8">
               {siteConfig.navLinks.map((link) => {
                 const isActive = isLinkActive(link.href)
+
+                if (link.label === "MIR") {
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="transition-opacity duration-300 hover:opacity-80"
+                    >
+                      <Image
+                        src="/mir-logo.png"
+                        alt="MIR Center"
+                        width={80}
+                        height={40}
+                        className="object-contain h-8 w-auto"
+                      />
+                    </Link>
+                  )
+                }
 
                 return (
                   <Link
@@ -140,6 +162,26 @@ export function Header() {
             <div className="px-4 py-6 space-y-4">
               {siteConfig.navLinks.map((link) => {
                 const isActive = isLinkActive(link.href)
+
+                if (link.label === "MIR") {
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block py-2 transition-opacity duration-300 hover:opacity-80"
+                    >
+                      <Image
+                        src="/mir-logo.png"
+                        alt="MIR Center"
+                        width={60}
+                        height={30}
+                        className="object-contain h-8 w-auto"
+                      />
+                    </Link>
+                  )
+                }
+
                 return (
                   <Link
                     key={link.href}

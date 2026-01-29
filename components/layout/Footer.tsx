@@ -7,7 +7,12 @@ import { Mail, Phone, MapPin } from "lucide-react"
 import { siteConfig } from "@/lib/siteConfig"
 import { Container } from "@/components/ui/Container"
 
+import { usePathname } from "next/navigation"
+
 export function Footer() {
+  const pathname = usePathname()
+  if (pathname.startsWith("/mir")) return null
+
   return (
     <footer className="bg-primary text-white">
       <Container size="large" className="py-16">

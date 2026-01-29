@@ -60,6 +60,112 @@ export default function MIRPage() {
             // sideImage="/new/mir-hero.png"
             />
 
+            {/* About the Centre */}
+            <section className="py-24 bg-white">
+                <Container size="large">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInLeft}
+                            className="relative h-[400px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
+                        >
+                            <Image src="/new/facility.jpg"
+                                alt="Campus Facility"
+                                fill className="object-cover" />
+                        </motion.div>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInRight}
+                        >
+                            <SectionTitle
+                                label="About Us"
+                                title="About the Centre"
+                                subtitle="A pioneering institution in Sirhind, Punjab."
+                            />
+                            <div className="prose text-muted-foreground leading-relaxed">
+                                <p className="mb-4">
+                                    The Imam Rabbani Centre for Education & Guidance, located in the spiritually rich city of Sirhind, Punjab, stands as a pioneering institution offering a harmonious blend of Islamic scholarship and modern academic education.
+                                </p>
+                                <p>
+                                    Our vision is to provide an integrated learning environment where faith and intellect work together to produce balanced, purpose-driven individuals.
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+                </Container>
+            </section>
+
+            {/* Vision & Mission Grid */}
+            <section className="py-24 bg-primary">
+                <Container size="large">
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        className="grid md:grid-cols-2 gap-8"
+                    >
+                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
+                            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
+                            <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Vision</h3>
+                            <p className="text-muted-foreground">
+                                At the Imam Rabbani Centre for Education & Guidance, we believe that true education doesn't merely inform—it transforms. We combine knowledge with ethics, and learning with leadership, to prepare students who are spiritually grounded, socially responsible, and intellectually empowered.
+                            </p>
+                        </motion.div>
+                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
+                            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
+                            <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Mission</h3>
+                            <p className="text-muted-foreground">
+                                To provide a transformative educational environment that nurtures the heart and mind, bridging the gap between sacred values and modern challenges. We aim to produce graduates who are not only academically proficient but also ethically sound and dedicated to the service of humanity.
+                            </p>
+                        </motion.div>
+                    </motion.div>
+                </Container>
+            </section>
+
+            {/* Our Inspiration */}
+            <section className="py-24 bg-slate-50">
+                <Container size="large">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInLeft}
+                        >
+                            <SectionTitle
+                                label="Our Roots"
+                                title="Our Inspiration"
+                                subtitle="Guided by legacy and excellence."
+                            />
+                            <div className="prose text-muted-foreground leading-relaxed">
+                                <p className="mb-4">
+                                    This model draws inspiration from the spiritual teachings of Hazrat Mujaddid Alf-Thani and the exemplary educational ecosystem of Markaz Knowledge City in Kerala.
+                                </p>
+                                <p>
+                                    With its blend of religious seminaries, universities, innovation spaces, and community development initiatives, Markaz has become a benchmark for Islamic educational excellence. Imam Rabbani Centre aims to adapt and localize that vision in North India, particularly among the underserved regions of Punjab.
+                                </p>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInRight}
+                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
+                        >
+                            <Image src="/ap-usthad.jpeg"
+                                alt="Our Inspiration"
+                                fill className="object-cover" />
+                        </motion.div>
+                    </div>
+                </Container>
+            </section>
+
             {/* Founder's Message */}
             <section className="py-24 bg-white">
                 <Container size="large">
@@ -93,7 +199,7 @@ export default function MIRPage() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInRight}
-                            className="relative h-[500px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg arch-mask"
+                            className="relative h-[500px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
                         >
 
                             <Image src="/new/hkmustd.png"
@@ -105,38 +211,46 @@ export default function MIRPage() {
                 </Container>
             </section>
 
-            {/* About, Vision & Inspiration */}
-            <section className="py-24 mt-96 bg-primary">
+            {/* Chairman's Message */}
+            <section className="py-24 bg-slate-50">
                 <Container size="large">
-                    <motion.div
-                        variants={staggerContainer}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.1 }}
-                        className="grid md:grid-cols-3 gap-8"
-                    >
-                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
-                            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
-                            <h3 className="text-xl font-bold mb-4 text-primary text-center">About the Centre</h3>
-                            <p className="text-muted-foreground">
-                                The Imam Rabbani Centre for Education & Guidance, located in the spiritually rich city of Sirhind, Punjab, stands as a pioneering institution offering a harmonious blend of Islamic scholarship and modern academic education. Our vision is to provide an integrated learning environment where faith and intellect work together to produce balanced, purpose-driven individuals.
-                            </p>
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInLeft}
+                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
+                        >
+                            <Image src="/fazil.jpeg"
+                                alt="Chairman Name"
+                                fill className="object-cover" />
                         </motion.div>
-                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
-                            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
-                            <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Vision</h3>
-                            <p className="text-muted-foreground">
-                                At the Imam Rabbani Centre for Education & Guidance, we believe that true education doesn't merely inform—it transforms. We combine knowledge with ethics, and learning with leadership, to prepare students who are spiritually grounded, socially responsible, and intellectually empowered.
-                            </p>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInRight}
+                        >
+                            <SectionTitle
+                                label="Message from the Chairman"
+                                title="Muhammed Fazil Nurani"
+                                subtitle="Chairman, Imam Rabbani Centre for Education & Guidance"
+                            />
+                            <div className="prose text-muted-foreground leading-relaxed">
+                                <p className="mb-4">
+                                    <span className="text-5xl font-bold text-primary leading-none mr-2 float-left">"</span>Great transformation begins with a vision and a dedication to learning. Our Centre stands on this foundation, connecting our rich history with the needs of the future. We aim to mold a generation that is deeply rooted in faith while being fully equipped for the modern world.
+                                </p>
+                                <p className="mb-4">
+                                    We see no separation between spiritual growth and worldly success; rather, we seek to build leaders who possess balance, clarity, and purpose. This is a movement for the soul and the community.
+                                </p>
+                                <p>
+                                    Drawing from the legacy of our predecessors and successful educational models, we provide a holistic system of values and excellence. We hope to contribute to a confident and enlightened society.
+                                    <span className="text-5xl font-bold text-primary leading-none mr-46 float-right">"</span>
+                                </p>
+                            </div>
                         </motion.div>
-                        <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
-                            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
-                            <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Inspiration</h3>
-                            <p className="text-muted-foreground">
-                                This model draws inspiration from the spiritual teachings of Hazrat Mujaddid Alf-Thani and the exemplary educational ecosystem of Markaz Knowledge City in Kerala. With its blend of religious seminaries, universities, innovation spaces, and community development initiatives, Markaz has become a benchmark for Islamic educational excellence. Imam Rabbani Centre aims to adapt and localize that vision in North India, particularly among the underserved regions of Punjab.
-                            </p>
-                        </motion.div>
-                    </motion.div>
+                    </div>
                 </Container>
             </section>
 
@@ -186,7 +300,7 @@ export default function MIRPage() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInLeft}
-                            className="relative h-[400px] w-full bg-white overflow-hidden flex items-center justify-center border shadow-lg arch-mask"
+                            className="relative h-[400px] w-full bg-white overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
                         >
                             <Image
                                 src="/new/facility.jpg"
@@ -328,7 +442,7 @@ export default function MIRPage() {
             </section>
 
             {/* Call to Action */}
-            <section className="py-24 bg-blue-900/80 text-primary-foreground">
+            <section className="py-24 bg-primary/80 text-primary-foreground">
 
                 <Container size="large" className="text-center">
                     <motion.div
