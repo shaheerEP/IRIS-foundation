@@ -269,11 +269,7 @@ export default function MIRPage() {
                             subtitle="A holistic approach to learning"
                         />
                     </motion.div>
-                    <motion.div
-                        variants={staggerContainer}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.1 }}
+                    <div
                         className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
                     >
                         {[
@@ -282,12 +278,19 @@ export default function MIRPage() {
                             { title: "Life Style and Etiquettes", desc: "Daily discipline, mentorship, and spiritual development." },
                             { title: "Leadership", desc: "Critical thinking, ethical reasoning, and community service." }
                         ].map((item, i) => (
-                            <motion.div key={i} variants={fadeInUp} className="p-6 border rounded-xl hover:shadow-lg transition-shadow bg-slate-50">
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="p-6 border rounded-xl hover:shadow-lg transition-shadow bg-slate-50"
+                            >
                                 <h4 className="font-bold text-lg mb-2 text-primary">{item.title}</h4>
                                 <p className="text-sm text-muted-foreground">{item.desc}</p>
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </div>
                 </Container>
             </section>
 
