@@ -123,14 +123,14 @@ export default function MIRPage() {
                             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
                             <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Vision</h3>
                             <p className="text-muted-foreground">
-                                At the Imam Rabbani Centre for Education & Guidance, we believe that true education doesn't merely inform—it transforms. We combine knowledge with ethics, and learning with leadership, to prepare students who are spiritually grounded, socially responsible, and intellectually empowered.
+                                To nurture a generation grounded in faith, enriched with knowledge, and guided by values capable of leading society with wisdom, integrity, and responsibility.
                             </p>
                         </motion.div>
                         <motion.div variants={fadeInUp} className="bg-white p-8 pt-16 rounded-2xl arch-rounded relative mt-8">
                             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-primary/20 rounded-full"></div>
                             <h3 className="text-xl font-bold mb-4 text-primary text-center">Our Mission</h3>
                             <p className="text-muted-foreground">
-                                To provide a transformative educational environment that nurtures the heart and mind, bridging the gap between sacred values and modern challenges. We aim to produce graduates who are not only academically proficient but also ethically sound and dedicated to the service of humanity.
+                                To provide holistic education that combines Islamic learning, moral development, and modern knowledge; to guide students towards intellectual excellence, ethical living, and meaningful contribution to society.
                             </p>
                         </motion.div>
                     </motion.div>
