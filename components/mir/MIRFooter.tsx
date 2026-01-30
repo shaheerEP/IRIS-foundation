@@ -21,21 +21,19 @@ export function MIRFooter() {
                     <div>
                         <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
                         <ul className="space-y-2">
-                            <li>
-                                <Link href="/mir" className="text-primary-foreground/80 hover:text-primary-foreground text-sm">
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/mir/programs" className="text-primary-foreground/80 hover:text-primary-foreground text-sm">
-                                    Programs
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/mir/contact" className="text-primary-foreground/80 hover:text-primary-foreground text-sm">
-                                    Contact
-                                </Link>
-                            </li>
+                            {[
+                                { label: "Home", href: "/mir" },
+                                { label: "About", href: "/mir#about" },
+                                { label: "Programs", href: "/mir#programs" },
+                                { label: "Donate", href: "/donate" },
+                                { label: "Contact", href: "/contact" },
+                            ].map((link) => (
+                                <li key={link.href}>
+                                    <Link href={link.href} className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors">
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 

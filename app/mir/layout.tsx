@@ -6,8 +6,18 @@ import "./../globals.css"
 
 const outfit = Outfit({ subsets: ["latin"] })
 
+import type { Metadata } from "next"
 import { MIRHeader } from "@/components/mir/MIRHeader"
 import { MIRFooter } from "@/components/mir/MIRFooter"
+
+export const metadata: Metadata = {
+    title: "Markaz Imam Rabbani",
+    description: "Imam Rabbani Centre for Education & Guidance",
+    openGraph: {
+        title: "Markaz Imam Rabbani",
+        images: ["/mir-logo.png"],
+    },
+}
 
 export default function MIRLayout({
     children,

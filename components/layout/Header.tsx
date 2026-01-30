@@ -82,7 +82,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/90 backdrop-blur-lg shadow-lg py-5"
+          ? "bg-white/10 backdrop-blur-lg shadow-lg py-5"
           : "bg-transparent py-8",
       )}
     >
@@ -110,7 +110,7 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="transition-opacity duration-300 hover:opacity-80"
+                      className="flex items-center space-x-2 transition-opacity duration-300 hover:opacity-80"
                     >
                       <Image
                         src="/mir-logo.png"
@@ -119,6 +119,7 @@ export function Header() {
                         height={40}
                         className="object-contain h-8 w-auto"
                       />
+                      <span className={cn("text-sm font-semibold", isScrolled ? "text-primary/90" : "text-white/90")}>MIR</span>
                     </Link>
                   )
                 }

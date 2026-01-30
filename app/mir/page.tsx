@@ -63,6 +63,13 @@ export default function MIRPage() {
             {/* About the Centre */}
             <section id="about" className="py-24 bg-white">
                 <Container size="large">
+                    <div className="md:hidden mb-8">
+                        <SectionTitle
+                            label="About Us"
+                            title="About the Centre"
+                            subtitle="A pioneering institution in Sirhind, Punjab."
+                        />
+                    </div>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial="hidden"
@@ -81,11 +88,13 @@ export default function MIRPage() {
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInRight}
                         >
-                            <SectionTitle
-                                label="About Us"
-                                title="About the Centre"
-                                subtitle="A pioneering institution in Sirhind, Punjab."
-                            />
+                            <div className="hidden md:block">
+                                <SectionTitle
+                                    label="About Us"
+                                    title="About the Centre"
+                                    subtitle="A pioneering institution in Sirhind, Punjab."
+                                />
+                            </div>
                             <div className="prose text-muted-foreground leading-relaxed">
                                 <p className="mb-4">
                                     The Imam Rabbani Centre for Education & Guidance, located in the spiritually rich city of Sirhind, Punjab, stands as a pioneering institution offering a harmonious blend of Islamic scholarship and modern academic education.
@@ -130,18 +139,28 @@ export default function MIRPage() {
             {/* Our Inspiration */}
             <section className="py-24 bg-slate-50">
                 <Container size="large">
+                    <div className="md:hidden mb-8">
+                        <SectionTitle
+                            label="Our Roots"
+                            title="Our Inspiration"
+                            subtitle="Guided by legacy and excellence."
+                        />
+                    </div>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInLeft}
+                            className="order-2 md:order-1"
                         >
-                            <SectionTitle
-                                label="Our Roots"
-                                title="Our Inspiration"
-                                subtitle="Guided by legacy and excellence."
-                            />
+                            <div className="hidden md:block">
+                                <SectionTitle
+                                    label="Our Roots"
+                                    title="Our Inspiration"
+                                    subtitle="Guided by legacy and excellence."
+                                />
+                            </div>
                             <div className="prose text-muted-foreground leading-relaxed">
                                 <p className="mb-4">
                                     This model draws inspiration from the spiritual teachings of Hazrat Mujaddid Alf-Thani and the exemplary educational ecosystem of Markaz Knowledge City in Kerala.
@@ -156,7 +175,7 @@ export default function MIRPage() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInRight}
-                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
+                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl order-1 md:order-2"
                         >
                             <Image src="/ap-usthad.jpeg"
                                 alt="Our Inspiration"
@@ -169,18 +188,38 @@ export default function MIRPage() {
             {/* Founder's Message */}
             <section className="py-24 bg-white">
                 <Container size="large">
+                    <div className="md:hidden mb-8">
+                        <SectionTitle
+                            label="Message from the Founder"
+                            title="Dr. Muhammed Abdul Hakkim Azhari"
+                            subtitle="Founder, Imam Rabbani Centre for Education & Guidance"
+                        />
+                    </div>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInLeft}
+                            className="relative h-[500px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
                         >
-                            <SectionTitle
-                                label="Message from the Founder"
-                                title="Dr. Muhammed Abdul Hakkim Azhari"
-                                subtitle="Founder, Imam Rabbani Centre for Education & Guidance"
-                            />
+                            <Image src="/new/hkmustd.png"
+                                alt="Dr. Muhammed Abdul Hakkim Azhari"
+                                fill className="object-cover" />
+                        </motion.div>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInRight}
+                        >
+                            <div className="hidden md:block">
+                                <SectionTitle
+                                    label="Message from the Founder"
+                                    title="Dr. Muhammed Abdul Hakkim Azhari"
+                                    subtitle="Founder, Imam Rabbani Centre for Education & Guidance"
+                                />
+                            </div>
                             <div className="prose text-muted-foreground leading-relaxed">
                                 <p className="mb-4">
                                     <span className="text-5xl font-bold text-primary leading-none mr-2 float-left">"</span>At the heart of every revival lies a vision an unwavering belief that transformation begins with education. The Imam Rabbani Centre for Education & Guidance was born from such a vision. Rooted in the historic soil of Sirhind, our mission is to cultivate a generation of young Muslims who are equally grounded in faith and prepared for the modern world.
@@ -194,19 +233,6 @@ export default function MIRPage() {
                                 </p>
                             </div>
                         </motion.div>
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.2 }}
-                            variants={fadeInRight}
-                            className="relative h-[500px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
-                        >
-
-                            <Image src="/new/hkmustd.png"
-                                alt="Dr. Muhammed Abdul Hakkim Azhari"
-                                fill className="object-cover" />
-
-                        </motion.div>
                     </div>
                 </Container>
             </section>
@@ -214,29 +240,28 @@ export default function MIRPage() {
             {/* Chairman's Message */}
             <section className="py-24 bg-slate-50">
                 <Container size="large">
+                    <div className="md:hidden mb-8">
+                        <SectionTitle
+                            label="Message from the Chairman"
+                            title="Muhammed Fazil Nurani"
+                            subtitle="Chairman, Imam Rabbani Centre for Education & Guidance"
+                        />
+                    </div>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInLeft}
-                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
+                            className="order-2 md:order-1"
                         >
-                            <Image src="/fazil.jpeg"
-                                alt="Chairman Name"
-                                fill className="object-cover" />
-                        </motion.div>
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.2 }}
-                            variants={fadeInRight}
-                        >
-                            <SectionTitle
-                                label="Message from the Chairman"
-                                title="Muhammed Fazil Nurani"
-                                subtitle="Chairman, Imam Rabbani Centre for Education & Guidance"
-                            />
+                            <div className="hidden md:block">
+                                <SectionTitle
+                                    label="Message from the Chairman"
+                                    title="Muhammed Fazil Nurani"
+                                    subtitle="Chairman, Imam Rabbani Centre for Education & Guidance"
+                                />
+                            </div>
                             <div className="prose text-muted-foreground leading-relaxed">
                                 <p className="mb-4">
                                     <span className="text-5xl font-bold text-primary leading-none mr-2 float-left">"</span>Great transformation begins with a vision and a dedication to learning. Our Centre stands on this foundation, connecting our rich history with the needs of the future. We aim to mold a generation that is deeply rooted in faith while being fully equipped for the modern world.
@@ -249,6 +274,17 @@ export default function MIRPage() {
                                     <span className="text-5xl font-bold text-primary leading-none mr-46 float-right">"</span>
                                 </p>
                             </div>
+                        </motion.div>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeInRight}
+                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl order-1 md:order-2"
+                        >
+                            <Image src="/fazil.jpeg"
+                                alt="Chairman Name"
+                                fill className="object-cover" />
                         </motion.div>
                     </div>
                 </Container>

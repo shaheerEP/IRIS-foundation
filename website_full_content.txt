@@ -1,3 +1,5 @@
 we want to change the border for images in the mir page with just curved edged square 
 change the images of rabbanies and cultural centersadd mission of mir
 add chairman Message
+ensure images
+change the background images.
