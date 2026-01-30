@@ -41,7 +41,15 @@ export function MIRHeader() {
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center space-x-6">
                         <nav className="flex items-center space-x-8">
-                            {siteConfig.navLinks.map((link) => (
+                            <Link href="/" className="hover:opacity-80 transition-opacity">
+                                <Image src="/logo.png" alt="Home" width={40} height={40} className="w-auto h-8 object-contain" />
+                            </Link>
+                            {[
+                                { label: "About", href: "#about" },
+                                { label: "Programs", href: "#programs" },
+                                { label: "Donate", href: "/donate" },
+                                { label: "Contact", href: "/contact" },
+                            ].map((link) => (
                                 <Link
                                     key={link.href}
                                     href={link.href}
@@ -67,7 +75,13 @@ export function MIRHeader() {
                 {isOpen && (
                     <div className="md:hidden absolute top-full left-0 right-0 bg-primary/95 backdrop-blur-lg shadow-xl border-t border-primary-foreground/20">
                         <div className="px-4 py-6 space-y-4">
-                            {siteConfig.navLinks.map((link) => (
+                            {[
+                                { label: "Home", href: "/" },
+                                { label: "About", href: "#about" },
+                                { label: "Programs", href: "#programs" },
+                                { label: "Donate", href: "/donate" },
+                                { label: "Contact", href: "/contact" },
+                            ].map((link) => (
                                 <Link
                                     key={link.href}
                                     href={link.href}

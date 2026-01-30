@@ -61,7 +61,7 @@ export default function MIRPage() {
             />
 
             {/* About the Centre */}
-            <section className="py-24 bg-white">
+            <section id="about" className="py-24 bg-white">
                 <Container size="large">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div
