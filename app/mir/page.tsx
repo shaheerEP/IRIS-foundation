@@ -157,9 +157,9 @@ export default function MIRPage() {
                         >
                             <div className="hidden md:block">
                                 <SectionTitle
-                                    label="Our Roots"
-                                    title="Our Inspiration"
-                                    subtitle="Guided by legacy and excellence."
+                                    label="Our Inspiration"
+                                    title="Shaikh Abubaker Ahmed"
+                                    subtitle="Grand Mufti of India"
                                 />
                             </div>
                             <div className="prose text-muted-foreground leading-relaxed">
