@@ -11,6 +11,7 @@ interface HeroProps {
   title: string
   subtitle: string
   primaryCta?: { label: string; href: string }
+  primaryCtaVariant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "glass"
   secondaryCta?: { label: string; href: string }
   backgroundImage?: string
   overlay?: boolean
@@ -22,6 +23,7 @@ export function Hero({
   title,
   subtitle,
   primaryCta,
+  primaryCtaVariant = "secondary",
   secondaryCta,
   backgroundImage,
   overlay = true,
@@ -115,7 +117,7 @@ export function Hero({
                     show: { y: 0, opacity: 1 },
                   }}
                 >
-                  <Button asChild variant="secondary" size="lg">
+                  <Button asChild variant={primaryCtaVariant} size="lg">
                     <Link href={primaryCta.href}>
                       {primaryCta.label}
                     </Link>

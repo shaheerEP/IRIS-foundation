@@ -56,6 +56,7 @@ export default function MIRPage() {
                 title="Imam Rabbani Center for Education & Guidance"
                 subtitle="The symbol signifies that knowledge is the bedrock of all social, cultural, and environmental sustainability in the universe."
                 primaryCta={{ label: "Register for Admission", href: "https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog" }}
+                primaryCtaVariant="default"
                 backgroundImage="/new/mir-hero-bg.png"
             // sideImage="/new/mir-hero.png"
             />
@@ -143,7 +144,7 @@ export default function MIRPage() {
                         <SectionTitle
                             label="Our Roots"
                             title="Our Inspiration"
-                            subtitle="Guided by legacy and excellence."
+                            subtitle="SHAIKH ABUBAKER AHMED (Grand Mufti of India)"
                         />
                     </div>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
