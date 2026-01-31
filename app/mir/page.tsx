@@ -127,7 +127,6 @@ export default function MIRPage() {
             <section className="py-24 bg-primary">
                 <Container size="large">
                     <motion.div
-                        onViewportEnter={() => setShowBackground(true)}
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="visible"
@@ -310,6 +309,7 @@ export default function MIRPage() {
             <section className="py-24 bg-white">
                 <Container size="large">
                     <motion.div
+                        onViewportEnter={() => setShowBackground(true)}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}

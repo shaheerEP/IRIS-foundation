@@ -62,7 +62,7 @@ const programs = [
     description: "Training young men and women to become community leaders and social workers.",
     stats: "200+",
     statsLabel: "Fellows",
-    image: "/new/rabbani.jpg",
+    image: "/rabbani.jpeg",
   },
   {
     icon: <Building className="w-8 h-8 text-indigo-700" />,
@@ -73,7 +73,7 @@ const programs = [
     description: "Community hubs hosting classes, mentoring sessions, and cultural programs.",
     stats: "40+",
     statsLabel: "Centers",
-    image: "/center-1.jpg",
+    image: "/culture.jpeg",
   },
 ]
 
