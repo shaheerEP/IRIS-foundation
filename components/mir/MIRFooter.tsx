@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 export function MIRFooter() {
     return (
-        <footer className="bg-primary text-primary-foreground mt-auto">
+        <footer className="bg-primary text-primary-foreground mt-auto relative z-10">
             <Container size="large" className="py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Column 1 */}

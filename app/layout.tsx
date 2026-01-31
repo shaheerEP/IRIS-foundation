@@ -45,13 +45,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <div className="fixed inset-0 z-[-1]">
-          <Image
-            src="/new/home-bg1.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
+          {/* Background removed, moved to page.tsx */}
         </div>
         <div className="flex min-h-screen flex-col">
           <Header />

@@ -10,6 +10,7 @@ import Image from "next/image"
 import { CheckCircle2, MapPin, Mail, Globe, Phone } from "lucide-react"
 
 import { PageTransitionToast } from "@/components/ui/PageTransitionToast"
+import { useState } from "react"
 
 export default function MIRPage() {
     const fadeInUp = {
@@ -20,6 +21,8 @@ export default function MIRPage() {
             transition: { duration: 0.6, ease: "easeOut" as const }
         }
     }
+
+    const [showBackground, setShowBackground] = useState(false)
 
     const fadeInLeft = {
         hidden: { opacity: 0, x: -50 },
@@ -52,6 +55,17 @@ export default function MIRPage() {
 
     return (
         <>
+            {showBackground && (
+                <div className="fixed inset-0 z-[-1]">
+                    <Image
+                        src="/new/mir-bg.jpg"
+                        alt="MIR Background"
+                        fill
+                        className="object-cover opacity-100"
+                        priority
+                    />
+                </div>
+            )}
             <Hero
                 title="Imam Rabbani Center for Education & Guidance"
                 subtitle="The symbol signifies that knowledge is the bedrock of all social, cultural, and environmental sustainability in the universe."
@@ -138,7 +152,7 @@ export default function MIRPage() {
             </section>
 
             {/* Our Inspiration */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-slate-100">
                 <Container size="large">
                     <div className="md:hidden mb-8">
                         <SectionTitle
@@ -239,7 +253,7 @@ export default function MIRPage() {
             </section>
 
             {/* Chairman's Message */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-slate-100">
                 <Container size="large">
                     <div className="md:hidden mb-8">
                         <SectionTitle
@@ -283,7 +297,7 @@ export default function MIRPage() {
                             variants={fadeInRight}
                             className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl order-1 md:order-2"
                         >
-                            <Image src="/fazil.jpeg"
+                            <Image src="/new/fazil-ustd.png"
                                 alt="Chairman Name"
                                 fill className="object-cover" />
                         </motion.div>
@@ -295,6 +309,7 @@ export default function MIRPage() {
             <section className="py-24 bg-white">
                 <Container size="large">
                     <motion.div
+                        onViewportEnter={() => setShowBackground(true)}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
@@ -332,8 +347,16 @@ export default function MIRPage() {
             </section>
 
             {/* Why Choose Us */}
-            <section className="py-24 bg-primary text-primary-foreground">
+            <section className="py-24 mt-80 bg-primary text-primary-foreground">
                 <Container size="large">
+                    <div className="md:hidden mb-8">
+                        <SectionTitle
+                            label="Benefits"
+                            title="Why Choose Us?"
+                            subtitle="We offer more than just a degree."
+                            light
+                        />
+                    </div>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial="hidden"
@@ -356,12 +379,14 @@ export default function MIRPage() {
                                 viewport={{ once: true, amount: 0.2 }}
                                 variants={fadeInRight}
                             >
-                                <SectionTitle
-                                    label="Benefits"
-                                    title="Why Choose Us?"
-                                    subtitle="We offer more than just a degree."
-                                    light
-                                />
+                                <div className="hidden md:block">
+                                    <SectionTitle
+                                        label="Benefits"
+                                        title="Why Choose Us?"
+                                        subtitle="We offer more than just a degree."
+                                        light
+                                    />
+                                </div>
                             </motion.div>
                             <motion.div
                                 variants={staggerContainer}
@@ -493,7 +518,7 @@ export default function MIRPage() {
                     >
                         <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Join Our Mission?</h2>
                         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
-                            <Button asChild variant="secondary" className="w-full sm:w-auto py-4 px-8 whitespace-normal text-center">
+                            <Button asChild variant="mir-secondary" className="w-full sm:w-auto py-4 px-8 whitespace-normal text-center">
                                 <Link href="https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog">Register for Admission</Link>
                             </Button>
 

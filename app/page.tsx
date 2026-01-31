@@ -9,8 +9,9 @@ import { Button } from "@/components/ui/button"
 import { SectionTitle } from "@/components/ui/SectionTitle"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 export default function Home() {
   const router = useRouter()
@@ -51,8 +52,26 @@ export default function Home() {
     }
   }
 
+
+  const [showBackground, setShowBackground] = useState(false)
+
+  // Use simple Intersection Observer or Framer Motion's onViewportEnter/useInView
+  // Since we have framer-motion, let's use a wrapper for the trigger area
+
   return (
     <>
+      {showBackground && (
+        <div className="fixed inset-0 z-[-1]">
+          <Image
+            src="/new/home-bg1.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      )}
+
       {/* Hero already animated */}
       <Hero
         id="home"
@@ -127,9 +146,12 @@ export default function Home() {
       </div>
 
       {/* PROGRAMS */}
-      <div>
+      <motion.div
+        onViewportEnter={() => setShowBackground(true)}
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <ProgramsOverview />
-      </div>
+      </motion.div>
 
 
 

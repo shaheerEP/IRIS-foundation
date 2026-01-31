@@ -28,18 +28,17 @@ export default function MIRLayout({
         <div className={`relative min-h-screen mir-theme ${outfit.className} flex flex-col`}>
             <MIRHeader />
 
-            {/* Background Image Space */}
+            {/* Background Image Space - moved to page.tsx */}
             <div className="fixed inset-0 z-[-1]">
-
-                <Image
-                    src="/new/mir-bg.jpg"
-                    alt="MIR Background"
-                    fill
-                    className="object-cover opacity-100"
-                    priority
-                />
-
-                <div className="w-full h-full bg-slate-50" /> {/* Fallback/Placeholder background */}
+                {/* Fallback/Placeholder background if needed, or just let page handle it. 
+                     The original code had a bg-slate-50 div. I will keep a base background if implied, 
+                     but the user request focuses on the image. 
+                     Actually, looking at the file content, there was a bg-slate-50 div as well. 
+                     Let's keep the structure clean. The user wants the *image* fetched on scroll.
+                     I'll leave the container empty or remove the image part. 
+                     The code to remove is lines 34-40 (Image) and 42 (div).
+                  */}
+                <div className="w-full h-full bg-slate-50" />
             </div>
 
             <main className="relative z-0 flex-1">
