@@ -71,7 +71,7 @@ export default function MIRPage() {
                 subtitle="The symbol signifies that knowledge is the bedrock of all social, cultural, and environmental sustainability in the universe."
                 primaryCta={{ label: "Register for Admission", href: "https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog" }}
                 primaryCtaVariant="mir-primary"
-                backgroundImage="/new/mir-hero-bg.png"
+                backgroundImage="/hero.jpeg"
             // sideImage="/new/mir-hero.png"
             />
 
