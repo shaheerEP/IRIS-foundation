@@ -190,7 +190,7 @@ export default function MIRPage() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInRight}
-                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl order-1 md:order-2"
+                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-[50%] order-1 md:order-2"
                         >
                             <Image src="/ap-usthad.jpeg"
                                 alt="Our Inspiration"
@@ -216,7 +216,7 @@ export default function MIRPage() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInLeft}
-                            className="relative h-[500px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
+                            className="relative h-[500px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-[50%]"
                         >
                             <Image src="/new/hkmustd.png"
                                 alt="Dr. Muhammed Abdul Hakkim Azhari"
@@ -295,7 +295,7 @@ export default function MIRPage() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={fadeInRight}
-                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl order-1 md:order-2"
+                            className="relative h-[500px] w-full bg-slate-200 overflow-hidden flex items-center justify-center border shadow-lg rounded-[50%] order-1 md:order-2"
                         >
                             <Image src="/new/fazil-ustd.png"
                                 alt="Chairman Name"
