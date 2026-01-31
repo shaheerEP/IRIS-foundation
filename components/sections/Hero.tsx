@@ -11,7 +11,7 @@ interface HeroProps {
   title: string
   subtitle: string
   primaryCta?: { label: string; href: string }
-  primaryCtaVariant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "glass"
+  primaryCtaVariant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "glass" | "mir-primary" | "mir-secondary"
   secondaryCta?: { label: string; href: string }
   backgroundImage?: string
   overlay?: boolean

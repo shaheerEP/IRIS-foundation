@@ -77,19 +77,26 @@ export default function Home() {
               variants={fadeInLeft}
             >
               <SectionTitle
-                label="Our Mission"
+                label="Our Vision & Mission"
                 title="Touching Hearts in Forgotten Villages"
                 subtitle="Reaching children and families in places beyond the main roads, where opportunities are rare and support is limited."
               />
 
-              <p className="text-muted white leading-relaxed mb-6">
-                IRIS Foundation serves backward and neglected communities in the rural
-                belts of Punjab and other North Indian states...
-              </p>
-              <p className="text-muted leading-relaxed mb-8">
-                Alongside education, our relief work, food programs, and clean
-                drinking water projects help families live with dignity...
-              </p>
+              <div className="space-y-8 mb-8">
+                <div>
+                  <h4 className="font-bold text-lg mb-2 text-primary">VISION</h4>
+                  <p className="text-muted leading-relaxed">
+                    An India where a faith-inspired Muslim civil society leads in education, uplifts the marginalized, strengthens social harmony, and contributes to the nation’s moral and economic progress.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-lg mb-2 text-primary">MISSION</h4>
+                  <p className="text-muted leading-relaxed">
+                    To empower individuals and communities through quality education, ethical values, and skill development, nurturing responsible citizens committed to nation building and social harmony.
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
             {/* Right Quote Card */}

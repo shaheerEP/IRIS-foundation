@@ -56,7 +56,7 @@ export default function MIRPage() {
                 title="Imam Rabbani Center for Education & Guidance"
                 subtitle="The symbol signifies that knowledge is the bedrock of all social, cultural, and environmental sustainability in the universe."
                 primaryCta={{ label: "Register for Admission", href: "https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog" }}
-                primaryCtaVariant="default"
+                primaryCtaVariant="mir-primary"
                 backgroundImage="/new/mir-hero-bg.png"
             // sideImage="/new/mir-hero.png"
             />
@@ -79,7 +79,7 @@ export default function MIRPage() {
                             variants={fadeInLeft}
                             className="relative h-[400px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
                         >
-                            <Image src="/new/facility.jpg"
+                            <Image src="/new/mir-about3.png"
                                 alt="Campus Facility"
                                 fill className="object-cover" />
                         </motion.div>
@@ -265,13 +265,13 @@ export default function MIRPage() {
                             </div>
                             <div className="prose text-muted-foreground leading-relaxed">
                                 <p className="mb-4">
-                                    <span className="text-5xl font-bold text-primary leading-none mr-2 float-left">"</span>Great transformation begins with a vision and a dedication to learning. Our Centre stands on this foundation, connecting our rich history with the needs of the future. We aim to mold a generation that is deeply rooted in faith while being fully equipped for the modern world.
+                                    <span className="text-5xl font-bold text-primary leading-none mr-2 float-left">"</span>Every era presents its own challenges, and every challenge demands thoughtful leadership grounded in faith and knowledge. Markaz Imam Rabbani for Education & Guidance emerges as a response to this responsibility—a space dedicated to shaping minds, refining character, and strengthening our community.
                                 </p>
                                 <p className="mb-4">
-                                    We see no separation between spiritual growth and worldly success; rather, we seek to build leaders who possess balance, clarity, and purpose. This is a movement for the soul and the community.
+                                    By drawing from the spiritual insights of Hazrat Mujaddid Alf-Thani (May God have mercy on him) and embracing structured, forward-looking educational models, we seek to prepare students for both worldly engagement and spiritual fulfillment. Education here is not merely about achievement, but about service, integrity, and purpose.
                                 </p>
                                 <p>
-                                    Drawing from the legacy of our predecessors and successful educational models, we provide a holistic system of values and excellence. We hope to contribute to a confident and enlightened society.
+                                    May Allah bless this Centre, guide its students and teachers, and allow it to contribute meaningfully to the revival and progress of the Community.
                                     <span className="text-5xl font-bold text-primary leading-none mr-46 float-right">"</span>
                                 </p>
                             </div>

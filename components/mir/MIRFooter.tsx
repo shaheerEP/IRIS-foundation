@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { siteConfig } from "@/lib/siteConfig"
 import { Container } from "@/components/ui/Container"
+import { Button } from "@/components/ui/button"
 
 export function MIRFooter() {
     return (
@@ -63,6 +64,13 @@ export function MIRFooter() {
                             markazimamrabbani@gmail.com<br />
                             +91 75083 69313
                         </p>
+                        <div className="mt-6">
+                            <Button asChild variant="mir-secondary" className="w-full font-bold">
+                                <Link href="/donate">
+                                    Donate Now
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
