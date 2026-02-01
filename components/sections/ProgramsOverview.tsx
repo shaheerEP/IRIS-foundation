@@ -141,7 +141,7 @@ function ProgramSection({ program, index }: { program: any; index: number }) {
         {/* Stats Block */}
         <div className="flex items-center gap-6 mt-2">
           <div className={cn(
-            "px-5 py-2 rounded-lg border-l-4",
+            "px-5 py-2 rounded-lg border-l-4 w-full",
             program.bgAccent,
             program.borderAccent
           )}>
