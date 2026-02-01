@@ -97,8 +97,8 @@ export default function Home() {
             >
               <SectionTitle
                 label="Our Vision & Mission"
-                title="Touching Hearts in Forgotten Villages"
-                subtitle="Reaching children and families in places beyond the main roads, where opportunities are rare and support is limited."
+                title="Shaping Communities Through Education and Values"
+                subtitle="Reaching children and families in underserved regions with quality education, ethical guidance, and opportunities that empower them to contribute positively to society and the nation."
               />
 
               <div className="space-y-8 mb-8">
