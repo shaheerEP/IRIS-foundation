@@ -85,33 +85,58 @@ export default function Home() {
 
 
       {/* ABOUT SECTION */}
+      {/* ABOUT SECTION */}
       <section id="about" className="py-24 bg-white">
         <Container size="large">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col gap-12 max-w-5xl mx-auto">
 
-            {/* Left */}
+            {/* Quote Card - Now at Top & Centered */}
+
+
+            {/* Section Title - Centered */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInLeft}
+              variants={fadeInUp}
             >
               <SectionTitle
+
                 label="Our Vision & Mission"
                 title="Shaping Communities Through Education and Values"
                 subtitle="Reaching children and families in underserved regions with quality education, ethical guidance, and opportunities that empower them to contribute positively to society and the nation."
               />
+            </motion.div>
 
-              <div className="space-y-8 mb-8">
-                <div>
-                  <h4 className="font-bold text-lg mb-2 text-primary">VISION</h4>
+            {/* Vision & Mission - 2 Columns & Text Centered */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInUp}
+            >
+              <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
+                {/* Vision Card */}
+                <div className="flex flex-col items-center text-center p-8 rounded-3xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2 1.5-3.5 0-3-2.5-5.5-5.5-5.5S7 5 7 8c0 1.5.5 2.5 1.5 3.5.8.8 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg>
+                    </div>
+                    <h4 className="font-bold text-lg text-primary uppercase tracking-wide">VISION</h4>
+                  </div>
                   <p className="text-muted leading-relaxed">
                     An India where a faith-inspired Muslim civil society leads in education, uplifts the marginalized, strengthens social harmony, and contributes to the nation’s moral and economic progress.
                   </p>
                 </div>
 
-                <div>
-                  <h4 className="font-bold text-lg mb-2 text-primary">MISSION</h4>
+                {/* Mission Card */}
+                <div className="flex flex-col items-center text-center p-8 rounded-3xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                    </div>
+                    <h4 className="font-bold text-lg text-primary uppercase tracking-wide">MISSION</h4>
+                  </div>
                   <p className="text-muted leading-relaxed">
                     To empower individuals and communities through quality education, ethical values, and skill development, nurturing responsible citizens committed to nation building and social harmony.
                   </p>
@@ -119,20 +144,18 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Right Quote Card */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInRight}
+              variants={fadeInUp}
+              className="flex justify-center"
             >
-              <div className="relative">
-                <div className="glass-card rounded-3xl p-8">
-                  <blockquote className="text-lg italic text-foreground/80 mb-4">
-                    “Indeed i was sent as a teacher”
-                  </blockquote>
-                  <cite className="text-sm text-muted">— Prophet Muhammed (s)</cite>
-                </div>
+              <div className="glass-card rounded-3xl p-8 text-center max-w-2xl w-full">
+                <blockquote className="text-lg italic text-foreground/80 mb-4">
+                  “Indeed i was sent as a teacher”
+                </blockquote>
+                <cite className="text-sm text-muted">— Prophet Muhammed (s)</cite>
               </div>
             </motion.div>
 
