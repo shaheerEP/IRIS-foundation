@@ -84,29 +84,45 @@ export default function Home() {
 
 
 
-      {/* ABOUT SECTION */}
+
       {/* ABOUT SECTION */}
       <section id="about" className="py-24 bg-white">
         <Container size="large">
           <div className="flex flex-col gap-12 max-w-5xl mx-auto">
 
-            {/* Quote Card - Now at Top & Centered */}
+            {/* Header: Title (Left) & Quote (Right) */}
+            <div className="grid md:grid-cols-2 gap-8 items-center">
 
+              {/* Left: Section Title */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={fadeInLeft}
+              >
+                <SectionTitle
+                  label="Our Vision & Mission"
+                  title="Shaping Communities Through Education and Values"
+                  subtitle="Reaching children and families in underserved regions with quality education, ethical guidance, and opportunities that empower them to contribute positively to society and the nation."
+                />
+              </motion.div>
 
-            {/* Section Title - Centered */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInUp}
-            >
-              <SectionTitle
-
-                label="Our Vision & Mission"
-                title="Shaping Communities Through Education and Values"
-                subtitle="Reaching children and families in underserved regions with quality education, ethical guidance, and opportunities that empower them to contribute positively to society and the nation."
-              />
-            </motion.div>
+              {/* Right: Quote Card */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={fadeInRight}
+                className="flex justify-center md:justify-end"
+              >
+                <div className="glass-card rounded-3xl p-8 text-center max-w-md w-full">
+                  <blockquote className="text-lg italic text-foreground/80 mb-4">
+                    “Indeed i was sent as a teacher”
+                  </blockquote>
+                  <cite className="text-sm text-muted">— Prophet Muhammed (s)</cite>
+                </div>
+              </motion.div>
+            </div>
 
             {/* Vision & Mission - 2 Columns & Text Centered */}
             <motion.div
@@ -144,20 +160,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeInUp}
-              className="flex justify-center"
-            >
-              <div className="glass-card rounded-3xl p-8 text-center max-w-2xl w-full">
-                <blockquote className="text-lg italic text-foreground/80 mb-4">
-                  “Indeed i was sent as a teacher”
-                </blockquote>
-                <cite className="text-sm text-muted">— Prophet Muhammed (s)</cite>
-              </div>
-            </motion.div>
+
 
           </div>
         </Container>
