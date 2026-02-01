@@ -79,6 +79,7 @@ export default function Home() {
         subtitle="IRIS Foundation is dedicated to supporting education and social uplift in underprivileged villages across India. Together, we can create lasting change."
         //  sideImage="/new/above (2).png"
         backgroundImage="/new/home-bg3.jpeg"
+        enableZoomEffect={true}
       />
 
 

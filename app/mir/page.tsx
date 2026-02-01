@@ -72,7 +72,7 @@ export default function MIRPage() {
                 primaryCta={{ label: "Register for Admission", href: "https://docs.google.com/forms/d/e/1FAIpQLSerK_Ci-gXwBgBT95-oQavIeNQ0jJCAV0NDY4MmTcvdJB7xXA/viewform?usp=dialog" }}
                 primaryCtaVariant="mir-primary"
                 backgroundImage="/hero.jpeg"
-            // sideImage="/new/mir-hero.png"
+                enableZoomEffect={true}
             />
 
             {/* About the Centre */}

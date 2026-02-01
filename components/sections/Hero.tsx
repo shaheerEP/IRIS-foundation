@@ -17,6 +17,7 @@ interface HeroProps {
   overlay?: boolean
   id?: string
   sideImage?: string
+  enableZoomEffect?: boolean
 }
 
 export function Hero({
@@ -29,6 +30,7 @@ export function Hero({
   overlay = true,
   id,
   sideImage,
+  enableZoomEffect = false,
 }: HeroProps) {
   return (
     <section
@@ -40,13 +42,23 @@ export function Hero({
         className="absolute inset-0 z-0"
       >
         {backgroundImage && (
-          <Image
-            src={backgroundImage}
-            alt="Hero Background"
-            fill
-            className="object-cover"
-            priority
-          />
+          <motion.div
+            className="absolute inset-0 w-full h-full"
+            animate={enableZoomEffect ? { scale: [1, 1.1, 1] } : {}}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            <Image
+              src={backgroundImage}
+              alt="Hero Background"
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
         )}
         {overlay && (
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-primary/90 to-secondary/70" />

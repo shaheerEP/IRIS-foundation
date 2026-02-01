@@ -183,8 +183,10 @@
     @apply border-border outline-ring/50;
   }
 
+  html,
   body {
     @apply text-foreground antialiased relative;
+    overflow-x: hidden;
   }
 
   /* Background dimming overlay to reduce image opacity */
