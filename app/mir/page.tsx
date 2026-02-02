@@ -93,7 +93,7 @@ export default function MIRPage() {
                             variants={fadeInLeft}
                             className="relative h-[400px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
                         >
-                            <Image src="/new/mir-about3.png"
+                            <Image src="/new/mir-about4.png"
                                 alt="Campus Facility"
                                 fill className="object-cover" />
                         </motion.div>
@@ -243,8 +243,8 @@ export default function MIRPage() {
                                     We refuse to see a divide between sacred knowledge and worldly success; instead, we strive to nurture leaders who embody the balance, clarity, and purpose found in our Deen. This Centre is more than just an institution, it is a movement for the soul, the mind, and the community.
                                 </p>
                                 <p>
-                                    Inspired by the spiritual legacy of Hazrat Mujaddid Alf-Thani and the educational brilliance of the Kerala model, we offer a system that integrates Islamic values, academic excellence, and ethical leadership. It is our hope that this humble initiative contributes to the rise of a confident, educated, and spiritually aware Ummah. May Allah accept our efforts and make this Centre a beacon of guidance for generations to come.
-                                    <span className="text-5xl font-bold text-primary leading-none mr-46 float-right">"</span>
+                                    Inspired by the spiritual legacy of Hazrat Mujaddid Alf-Thani and the educational brilliance of the Kerala model, we offer a system that integrates Islamic values, academic excellence, and ethical leadership. It is our hope that this humble initiative contributes to the rise of a confident, educated, and spiritually aware Ummah. May Allah accept our efforts and make this Centre a beacon of guidance for generations to <span className="whitespace-nowrap">come.<span className="text-5xl font-bold text-primary leading-none ml-2">"</span></span>
+
                                 </p>
                             </div>
                         </motion.div>
@@ -285,8 +285,8 @@ export default function MIRPage() {
                                     By drawing from the spiritual insights of Hazrat Mujaddid Alf-Thani (May God have mercy on him) and embracing structured, forward-looking educational models, we seek to prepare students for both worldly engagement and spiritual fulfillment. Education here is not merely about achievement, but about service, integrity, and purpose.
                                 </p>
                                 <p>
-                                    May Allah bless this Centre, guide its students and teachers, and allow it to contribute meaningfully to the revival and progress of the Community.
-                                    <span className="text-5xl font-bold text-primary leading-none mr-46 float-right">"</span>
+                                    May Allah bless this Centre, guide its students and teachers, and allow it to contribute meaningfully to the revival and progress of the <span className="whitespace-nowrap">Community.<span className="text-5xl font-bold text-primary leading-none ml-2">"</span></span>
+
                                 </p>
                             </div>
                         </motion.div>
