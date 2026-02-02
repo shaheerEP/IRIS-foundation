@@ -93,7 +93,7 @@ export default function MIRPage() {
                             variants={fadeInLeft}
                             className="relative h-[400px] w-full bg-slate-100 overflow-hidden flex items-center justify-center border shadow-lg rounded-3xl"
                         >
-                            <Image src="/new/mir-about3.png"
+                            <Image src="/new/mir-about4.png"
                                 alt="Campus Facility"
                                 fill className="object-cover" />
                         </motion.div>
